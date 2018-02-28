@@ -1,3 +1,5 @@
+@import './scss/variables.scss';
+
 /* You can add global styles to this file, and also import other style files */
 
 /* You can add global styles to this file, and also import other style files */
@@ -16,7 +18,9 @@ html {
   
   /* ---- typography ---- */
   
-  body {}
+  body {
+    color: $color-body;
+  }
   
   h1 {}
   
