@@ -1,8 +1,24 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class TripService {
 
-  constructor() { }
+  API_URL = 'http://localhost:3000/trips';
+
+  constructor(private httpClient: HttpClient) { }
+
+  getOne(id): Promise<any> {
+    return this.httpClient.get(`${this.API_URL}/${id}`)
+    .toPromise()
+    .then((res: Response) => res.json());
+  }
+
+  createTrip(data): Promise<any> {
+    return this.httpClient.post(`${this.API_URL}/`, data)
+    .toPromise()
+    .then((res: Response) => res.json());
+  }
 
 }

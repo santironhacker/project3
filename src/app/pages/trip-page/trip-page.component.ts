@@ -11,5 +11,5 @@ export class TripPageComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }
