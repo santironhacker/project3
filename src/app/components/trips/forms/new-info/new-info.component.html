@@ -13,12 +13,11 @@
     </div>
   </div>
 
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && descriptionField.errors}">
     <label>Description: </label>
-    <input type="text" name="password" [(ngModel)]="password" #passwordField="ngModel" required minlength="6" [disabled]="processing"/>
-    <div *ngIf="feedbackEnabled && passwordField.errors">
-      <p *ngIf="passwordField.errors.required" class="validation">password required</p>
-      <p *ngIf="passwordField.errors.minlength" class="validation">password is too short</p>
+    <input type="text" name="describtion" [(ngModel)]="describtion" #describtionField="ngModel" required minlength="15" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && describtionField.errors">
+      <p *ngIf="describtionField.errors.required" class="validation">Please enter a describtion</p>
     </div>
   </div>
 
