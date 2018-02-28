@@ -22,6 +22,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { TripPageComponent } from './pages/trip-page/trip-page.component';
+import { NewInfoComponent } from './components/trips/forms/new-info/new-info.component';
+import { NewMembersComponent } from './components/trips/forms/new-members/new-members.component';
+import { AddPlaceComponent } from './components/trips/forms/add-place/add-place.component';
 
 
 // -- routes
@@ -41,7 +44,10 @@ const routes: Routes = [
     SignUpComponent,
     LoginComponent,
     UserPageComponent,
-    TripPageComponent
+    TripPageComponent,
+    NewInfoComponent,
+    NewMembersComponent,
+    AddPlaceComponent
   ],
   imports: [
     HttpClientModule,
