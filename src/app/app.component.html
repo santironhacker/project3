@@ -2,6 +2,9 @@
   nice header
   <div *ngIf="!user"> <app-login></app-login> </div>
   <div *ngIf="!user"><app-sign-up></app-sign-up> </div>
+  <div *ngIf="user"> 
+    <button (click)="logout()"> Logout</button>
+  </div>
 </header>
 
 <router-outlet id="site-main">
