@@ -15,7 +15,6 @@ export class SignUpComponent implements OnInit {
   feedbackEnabled = false;
   error = null;
   processing = false;
-  // ... model (e,g. username: String)
   username: String;
   password: String;
 
@@ -36,6 +35,7 @@ export class SignUpComponent implements OnInit {
           password: this.password
       })
         .then((result) => {
+          debugger;
           this.router.navigate(['/']);
         })
         .catch((err) => {
