@@ -2,7 +2,7 @@
   new-info works!
 </p>
 
-<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+<form (ngSubmit)="handleSubmitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
 
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
     <label>Name: </label>
@@ -14,15 +14,15 @@
 
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && descriptionField.errors}">
     <label>Description: </label>
-    <input type="text" name="describtion" [(ngModel)]="describtion" #describtionField="ngModel" required minlength="15" [disabled]="processing"/>
-    <div *ngIf="feedbackEnabled && describtionField.errors">
-      <p *ngIf="describtionField.errors.required" class="validation">Please enter a describtion</p>
+    <input type="text" name="description" [(ngModel)]="description" #describtionField="ngModel" required minlength="15" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && descriptionField.errors">
+      <p *ngIf="descriptionField.errors.required" class="validation">Please enter a description</p>
     </div>
   </div>
 
 
   <div class="field submit">
-    <button type="submit" [disabled]="processing">Sign up</button>
+    <button (click)="handleSubmitForm()" >Sign up</button>
     <div *ngIf="feedbackEnabled && form.invalid">
       <p class="validation">there are errors in the form, please review the fields</p>
     </div>
