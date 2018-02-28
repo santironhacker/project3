@@ -14,23 +14,24 @@ export class NewInfoComponent implements OnInit {
   feedbackEnabled = false;
   error = null;
   processing = false;
-  trip: {
-    name: String,
-    description: String,
-  }
+  name: String;
+  description: String;
+  tripObject: any;
 
-  // name
-  // description
-  //in the template name description
   @Output() trip2 = new EventEmitter<any>();
 
-  constructor(private tripService: TripService, private router: Router) { }
-
+  constructor(private tripService: TripService, private router: Router) {
+  }
+  
   ngOnInit() {
   }
-
-  handleSubmitForm(){
-    console.log( this.trip.name, this.trip.description)
+  
+  handleSubmitForm(form){
+    this.tripObject = {
+      name2: this.name,
+      description2: this.description
+    }
+    console.log( this.name, this.description, this.tripObject, this.tripObject.name2)
   }
   // submitForm(form) {
   //   this.error = '';
