@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TripService } from '../../services/trip.service';
 
 @Component({
   selector: 'app-trip-page',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TripPageComponent implements OnInit {
 
-  constructor() { }
+  // @Input() trip: any;
+
+
+  constructor(private tripService: TripService) { }
 
   ngOnInit() {
   }
+
+  handleCreate(paquito){
+    console.log("fdlajflkdrfs" + paquito.name)
+  }
+
+
   
 }

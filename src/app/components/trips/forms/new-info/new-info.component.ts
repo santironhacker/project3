@@ -3,8 +3,6 @@ import { TripService } from '../../../../services/trip.service';
 import { Router } from '@angular/router';
 // import { EventEmitter } from 'events';
 
-
-
 @Component({
   selector: 'app-new-info',
   templateUrl: './new-info.component.html',
@@ -18,7 +16,7 @@ export class NewInfoComponent implements OnInit {
   description: String;
   tripObject: any;
 
-  @Output() trip2 = new EventEmitter<any>();
+  @Output() trip = new EventEmitter<any>(this.tripObject);
 
   constructor(private tripService: TripService, private router: Router) {
   }
@@ -31,7 +29,9 @@ export class NewInfoComponent implements OnInit {
       name2: this.name,
       description2: this.description
     }
-    console.log( this.name, this.description, this.tripObject, this.tripObject.name2)
+    console.log( this.name, this.description, this.tripObject, this.tripObject.name2);
+    this.trip.emit(this.tripObject);
+
   }
   // submitForm(form) {
   //   this.error = '';
