@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 // Services
 import { AuthService } from './services/auth.service';
@@ -43,6 +44,7 @@ const routes: Routes = [
   imports: [
     HttpClientModule,
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes)
 
   ],
