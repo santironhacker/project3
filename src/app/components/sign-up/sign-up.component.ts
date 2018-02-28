@@ -35,8 +35,7 @@ export class SignUpComponent implements OnInit {
           password: this.password
       })
         .then((result) => {
-          debugger;
-          this.router.navigate(['/']);
+          this.router.navigate(['/users']);
         })
         .catch((err) => {
           this.error = err.error.error;
@@ -45,5 +44,4 @@ export class SignUpComponent implements OnInit {
         });
     }
   }
-
 }

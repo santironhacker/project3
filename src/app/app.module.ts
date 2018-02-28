@@ -20,7 +20,8 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 // Components
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
-import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
+import { UserPageComponent } from './pages/user-page/user-page.component';
+import { TripPageComponent } from './pages/trip-page/trip-page.component';
 
 
 // -- routes
@@ -28,7 +29,7 @@ const routes: Routes = [
   { path: '',  component: LandingPageComponent, canActivate: [ InitAuthGuardService ] },
   { path: 'login',  component: LoginComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'signup',  component: SignUpComponent, canActivate: [ RequireAnonGuardService ] },
-  // { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
+  { path: 'users',  component: UserPageComponent , canActivate: [ RequireUserGuardService ] },
   { path: '**', redirectTo: '' }
 ];
 
@@ -39,7 +40,8 @@ const routes: Routes = [
     LandingPageComponent,
     SignUpComponent,
     LoginComponent,
-    LayoutPageComponent
+    UserPageComponent,
+    TripPageComponent
   ],
   imports: [
     HttpClientModule,
