@@ -18,11 +18,13 @@ import { InitAuthGuardService } from './services/guards/init-auth-guard.service'
 // -- pages
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
-import { TripPageComponent } from './pages/trip-page/trip-page.component';
+import { TripMainPageComponent } from './pages/trip-main-page/trip-main-page.component';
+import { TripCreatePageComponent } from './pages/trip-create-page/trip-create-page.component';
 
 // -- components
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
+import { AboutInfoComponent } from './components/trips/main/about-info/about-info.component';
 import { NewInfoComponent } from './components/trips/forms/new-info/new-info.component';
 import { NewMembersComponent } from './components/trips/forms/new-members/new-members.component';
 import { AddPlaceComponent } from './components/trips/forms/add-place/add-place.component';
@@ -34,7 +36,8 @@ const routes: Routes = [
   { path: 'login',  component: LoginComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'signup',  component: SignUpComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'users',  component: UserPageComponent , canActivate: [ RequireUserGuardService ] },
-  { path: 'trips',  component: TripPageComponent , canActivate: [ RequireUserGuardService ] },
+  { path: 'trips/:id',  component: TripMainPageComponent , canActivate: [ RequireUserGuardService ] },
+  { path: 'trips/create',  component: TripCreatePageComponent , canActivate: [ RequireUserGuardService ] },
   { path: '**', redirectTo: '' }
 ];
 
@@ -46,10 +49,12 @@ const routes: Routes = [
     SignUpComponent,
     LoginComponent,
     UserPageComponent,
-    TripPageComponent,
+    TripCreatePageComponent,
     NewInfoComponent,
     NewMembersComponent,
-    AddPlaceComponent
+    AddPlaceComponent,
+    TripMainPageComponent,
+    AboutInfoComponent
   ],
   imports: [
     HttpClientModule,

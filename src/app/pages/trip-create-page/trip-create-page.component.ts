@@ -3,11 +3,11 @@ import { TripService } from '../../services/trip.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-trip-page',
-  templateUrl: './trip-page.component.html',
-  styleUrls: ['./trip-page.component.scss']
+  selector: 'app-trip-create-page',
+  templateUrl: './trip-create-page.component.html',
+  styleUrls: ['./trip-create-page.component.scss']
 })
-export class TripPageComponent implements OnInit {
+export class TripCreatePageComponent implements OnInit {
 
   // @Input() trip: any;
 
@@ -31,6 +31,4 @@ export class TripPageComponent implements OnInit {
 
   }
 
-
-  
 }

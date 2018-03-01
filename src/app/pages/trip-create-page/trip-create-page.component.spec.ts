@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TripPageComponent } from './trip-page.component';
+import { TripCreatePageComponent } from './trip-create-page.component';
 
-describe('TripPageComponent', () => {
-  let component: TripPageComponent;
-  let fixture: ComponentFixture<TripPageComponent>;
+describe('TripCreatePageComponent', () => {
+  let component: TripCreatePageComponent;
+  let fixture: ComponentFixture<TripCreatePageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TripPageComponent ]
+      declarations: [ TripCreatePageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TripPageComponent);
+    fixture = TestBed.createComponent(TripCreatePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
