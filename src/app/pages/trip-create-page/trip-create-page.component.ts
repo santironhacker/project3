@@ -31,7 +31,7 @@ export class TripCreatePageComponent implements OnInit {
     console.log(trip);
     this.tripService.createTrip(trip)
     .then((result) => {
-      this.router.navigate(['/users']);
+        this.router.navigate(['/users']);
     })
     // .catch((err) => {
     //   this.error = err.error.error;
