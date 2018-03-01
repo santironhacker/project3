@@ -8,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class AuthService {
 
-  private user: any;
+  public user: any;
   private userChange: Subject<any> = new Subject();
 
   private API_URL = 'http://localhost:3000/auth';
@@ -18,6 +18,7 @@ export class AuthService {
   constructor(private httpClient: HttpClient) { }
 
   private setUser(user?: any) {
+    console.log("user service", user);
     this.user = user;
     this.userChange.next(user);
     return user;
