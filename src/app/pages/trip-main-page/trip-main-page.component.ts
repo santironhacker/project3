@@ -11,10 +11,10 @@ export class TripMainPageComponent implements OnInit {
   constructor(private tripService: TripService) { }
 
   ngOnInit() {
-    this.tripService.getOne(id)
-    .then((trip) => {
-      this.
-    })
+    // this.tripService.getOne(id)
+    // .then((trip) => {
+    //   this.
+    // })
 
   }
 
