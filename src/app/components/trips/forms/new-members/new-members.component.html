@@ -1,3 +1,8 @@
 <p>
   new-members works!
 </p>
+
+<div *ngFor="let user of users">
+  <li>{{ user.name }}</li>
+  <button (click)="addUserToTrip()">Add to the trip</button>
+</div>
