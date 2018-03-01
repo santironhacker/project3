@@ -14,10 +14,14 @@ export class NewInfoComponent implements OnInit {
   processing = false;
   name: String;
   description: String;
+  members: Array<any>;
   tripObject: any;
+  user: any;
+  member: String;
 
+  @Input() users: any;
   @Output() trip = new EventEmitter<any>(this.tripObject);
-
+  
   constructor(private tripService: TripService, private router: Router) {
   }
   
@@ -27,11 +31,19 @@ export class NewInfoComponent implements OnInit {
   handleSubmitForm(form){
     this.tripObject = {
       name: this.name,
-      description: this.description
+      description: this.description,
+      members: this.member
     }
     console.log(this.tripObject);
     this.trip.emit(this.tripObject);
+  }
 
+  setInput(user){
+    let test = document.getElementById('test') as HTMLInputElement;
+    test.value = user.username;
+    this.member = user._id;
+    console.log(this.members);
+    console.log(this.member);
   }
   // submitForm(form) {
   //   this.error = '';

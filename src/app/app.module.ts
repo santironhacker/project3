@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 // -- services
 import { AuthService } from './services/auth.service';
 import { TripService } from './services/trip.service';
+import { UserService } from './services/user.service';
 
 // -- guards
 import { RequireAnonGuardService } from './services/guards/require-anon-guard.service';
@@ -63,7 +64,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
 
   ],
-  providers: [AuthService, InitAuthGuardService, RequireAnonGuardService, RequireUserGuardService, TripService],
+  providers: [AuthService, InitAuthGuardService, RequireAnonGuardService, RequireUserGuardService, TripService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

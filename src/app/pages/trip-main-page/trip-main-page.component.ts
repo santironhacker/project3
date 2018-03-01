@@ -8,14 +8,14 @@ import { TripService } from '../../services/trip.service';
 })
 export class TripMainPageComponent implements OnInit {
 
+
   constructor(private tripService: TripService) { }
 
   ngOnInit() {
-    // this.tripService.getOne(id)
-    // .then((trip) => {
-    //   this.
-    // })
-
+  //   this.tripService.getOne(this.id)
+  //   .then((trip) => {
+  //     this.
+  //   })
   }
 
 

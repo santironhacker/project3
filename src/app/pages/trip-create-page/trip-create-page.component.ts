@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TripService } from '../../services/trip.service';
 import { Router } from '@angular/router';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-trip-create-page',
@@ -10,13 +11,20 @@ import { Router } from '@angular/router';
 export class TripCreatePageComponent implements OnInit {
 
   // @Input() trip: any;
-
+  users: Array<any>;
 
   constructor(
     private tripService: TripService,
+    private userService: UserService,
     private router: Router) { }
 
   ngOnInit() {
+    this.userService.getUsers()
+    .then((users) => {
+      this.users = users;
+      console.log(users);
+      console.log(users[0].username);
+    }) 
   }
 
   handleCreate(trip){
@@ -28,6 +36,8 @@ export class TripCreatePageComponent implements OnInit {
     // .catch((err) => {
     //   this.error = err.error.error;
     // });
+  
+  
 
   }
 

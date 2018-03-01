@@ -20,6 +20,16 @@
     </div>
   </div>
 
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && memberField.errors}">
+      <label>Members: </label>
+      <input type="text" name="members" value="value" [(ngModel)]="value" #describtionField="ngModel" [disabled]="processing" id="test"/>
+      <div *ngIf="feedbackEnabled && memberField.errors">
+        <p *ngIf="memberField.errors.required" class="validation">Please enter a member</p>
+      </div>
+    </div>
+  
+  
+
 
   <div class="field submit">
     <button type="submit">Create one</button>
@@ -28,3 +38,10 @@
     </div>
   </div>
 </form>
+
+
+<div *ngFor="let user of users">
+  <li>{{ user.username }}</li>
+  <button (click)="setInput(user)">Add to the trip</button>
+</div>
+  
