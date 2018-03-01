@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-new-members',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-members.component.scss']
 })
 export class NewMembersComponent implements OnInit {
+
+  @Input() users: any;
 
   constructor() { }
 

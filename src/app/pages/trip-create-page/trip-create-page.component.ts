@@ -23,6 +23,7 @@ export class TripCreatePageComponent implements OnInit {
     .then((users) => {
       this.users = users;
       console.log(users);
+      console.log(users[0].username);
     }) 
   }
 
