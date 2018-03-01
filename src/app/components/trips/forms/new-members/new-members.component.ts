@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NewMembersComponent implements OnInit {
 
-  @Input() users: any;
+  // @Input() users: any;
 
   constructor() { }
 

@@ -2,5 +2,6 @@
   trip-create-page works!
 </p>
 
-<app-new-info (trip)="handleCreate($event)"></app-new-info>
-<app-new-members [users]="users" ></app-new-members>
+<app-new-info [users]="users" (trip)="handleCreate($event)"></app-new-info>
+<app-new-members  ></app-new-members>
+<!-- [users]="users" -->
