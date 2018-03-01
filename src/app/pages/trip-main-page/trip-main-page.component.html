@@ -1,3 +1,9 @@
 <p>
   trip-main-page works!
 </p>
+
+<div *ngIf="trip">
+  xxx{{trip.name}}xxxx
+</div>
+
+<app-about-info [trip]="trip"></app-about-info>

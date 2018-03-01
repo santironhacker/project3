@@ -29,6 +29,8 @@ import { AboutInfoComponent } from './components/trips/main/about-info/about-inf
 import { NewInfoComponent } from './components/trips/forms/new-info/new-info.component';
 import { NewMembersComponent } from './components/trips/forms/new-members/new-members.component';
 import { AddPlaceComponent } from './components/trips/forms/add-place/add-place.component';
+import { AboutMembersComponent } from './components/trips/about-members/about-members.component';
+import { AboutPlacesComponent } from './components/trips/about-places/about-places.component';
 
 
 // -- routes
@@ -55,7 +57,9 @@ const routes: Routes = [
     NewMembersComponent,
     AddPlaceComponent,
     TripMainPageComponent,
-    AboutInfoComponent
+    AboutInfoComponent,
+    AboutMembersComponent,
+    AboutPlacesComponent
   ],
   imports: [
     HttpClientModule,

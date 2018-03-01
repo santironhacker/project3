@@ -12,7 +12,6 @@ export class TripService {
   getOne(id): Promise<any> {
     return this.httpClient.get(`${this.API_URL}/${id}`)
     .toPromise()
-    .then((res: Response) => res.json());
   }
 
   createTrip(data: any): Promise<any> {
