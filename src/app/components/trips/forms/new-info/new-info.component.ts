@@ -26,10 +26,10 @@ export class NewInfoComponent implements OnInit {
   
   handleSubmitForm(form){
     this.tripObject = {
-      name2: this.name,
-      description2: this.description
+      name: this.name,
+      description: this.description
     }
-    console.log( this.name, this.description, this.tripObject, this.tripObject.name2);
+    console.log(this.tripObject);
     this.trip.emit(this.tripObject);
 
   }
