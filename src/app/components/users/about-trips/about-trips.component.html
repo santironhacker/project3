@@ -3,6 +3,7 @@
 <div *ngFor="let trip of trips">
   <li>Trip to <strong>{{ trip.name }}</strong>
       <app-card-trips [trip]="trip"></app-card-trips>
+      <a [routerLink]="['/trips', trip._id]">See trip details</a>
       <p></p>
   </li>
 </div>
