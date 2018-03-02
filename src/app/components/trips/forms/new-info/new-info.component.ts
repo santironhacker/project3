@@ -14,10 +14,11 @@ export class NewInfoComponent implements OnInit {
   processing = false;
   name: String;
   description: String;
-  members: Array<any>;
+  // members: Array<any>;
   tripObject: any;
   user: any;
   member: String;
+  members: Array<any> = [];
 
   @Input() users: any;
   @Output() trip = new EventEmitter<any>(this.tripObject);
@@ -32,18 +33,18 @@ export class NewInfoComponent implements OnInit {
     this.tripObject = {
       name: this.name,
       description: this.description,
-      members: this.member
+      members: this.members
     }
     console.log(this.tripObject);
     this.trip.emit(this.tripObject);
   }
 
   setInput(user){
-    let test = document.getElementById('test') as HTMLInputElement;
-    test.value = user.username;
-    this.member = user._id;
-    console.log(this.members);
-    console.log(this.member);
+    let added = document.createElement("p");
+    let div = document.getElementById('addedmembers') as HTMLElement;
+    added.innerText = user.username;
+    div.appendChild(added);
+    this.members.push(user._id);
   }
   // submitForm(form) {
   //   this.error = '';

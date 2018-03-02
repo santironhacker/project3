@@ -28,6 +28,7 @@
       </div>
     </div>
   
+    <div id="addedmembers"></div>
   
 
 
@@ -42,6 +43,6 @@
 
 <div *ngFor="let user of users">
   <li>{{ user.username }}</li>
-  <button (click)="setInput(user)">Add to the trip</button>
+  <button (click)="setInput(user)">Add Member to the trip</button>
 </div>
   
