@@ -22,4 +22,12 @@ export class TripService {
     .toPromise()
   }
 
+  getUserTrips(id): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.API_URL}/member/${id}`, options)
+    .toPromise()
+  }
+
 }
