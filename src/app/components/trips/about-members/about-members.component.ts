@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AboutMembersComponent implements OnInit {
 
-  @Input() trip: any;
-  @Input() users: Array<any>;
+  @Input() members: any;
 
   constructor() { }
 

@@ -23,11 +23,11 @@ html {
     margin: 0;
   }
   
-  h1 {}
+  // h1 {}
   
-  h2 {}
+  // h2 {}
   
-  h3 {}
+  // h3 {}
   
   
   
@@ -122,4 +122,9 @@ form .field.has-error input {
 agm-map {
   height: 300px;
   width: 300px;
+}
+
+.mapid {
+  border-radius: 50%;
+  border: black 20px;
 }

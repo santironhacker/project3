@@ -31,5 +31,11 @@ export class TripService {
     .toPromise()
   }
 
+  // to get all members of a trip
+  getTripUser(id): Promise<any> {
+    return this.httpClient.get(`${this.API_URL}/${id}/members`)
+    .toPromise()
+  }
+
 
 }
