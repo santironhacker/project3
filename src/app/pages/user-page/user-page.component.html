@@ -1,7 +1,8 @@
-<p>
-  user-page works!
-</p>
 
 <div *ngIf="user">Say hello!</div>
 
-  <div>hola {{ this.authService.user.username }}</div>
+  <div>Hello {{ this.authService.user.username }} !</div>
+
+  <app-about-trips [trips]="trips"></app-about-trips>
+
+  

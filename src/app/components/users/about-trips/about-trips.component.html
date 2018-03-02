@@ -1,0 +1,8 @@
+
+
+<div *ngFor="let trip of trips">
+  <li>Trip to <strong>{{ trip.name }}</strong>
+      <app-card-trips [trip]="trip"></app-card-trips>
+      <p></p>
+  </li>
+</div>
