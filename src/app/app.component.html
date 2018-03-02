@@ -7,8 +7,8 @@
   </div>
 </header>
 
-<router-outlet id="site-main">
-
+<div id="site-main">
+  
   <div class="container">
     <div [ngClass]="{'is-user': user, 'is-anon': anon}">
       <div *ngIf="loading">
@@ -16,17 +16,18 @@
       </div>
       <div *ngIf="!loading && !!user">
         <!-- <a [routerLink]="['/profile']">{{user.username}}</a>
-        <a [routerLink]="['/logout']">logout</a> -->
-      </div>
-      <div *ngIf="!loading && anon">
+          <a [routerLink]="['/logout']">logout</a> -->
+        </div>
+        <div *ngIf="!loading && anon">
+        </div>
       </div>
     </div>
+    
   </div>
-
-</router-outlet>
-
-<footer id="site-footer">
-  nice footer
-  <div *ngIf="!user"> Test </div>
-  <div *ngIf="user"> FB, twitter, instagramm</div>
-</footer>
+  
+  <footer id="site-footer">
+    nice footer
+    <div *ngIf="!user"> Test </div>
+    <div *ngIf="user"> FB, twitter, instagramm</div>
+  </footer>
+  <router-outlet></router-outlet>

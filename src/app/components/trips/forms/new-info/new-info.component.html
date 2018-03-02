@@ -19,18 +19,8 @@
       <p *ngIf="descriptionField.errors.required" class="validation">Please enter a description</p>
     </div>
   </div>
-
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && memberField.errors}">
-      <label>Members: </label>
-      <input type="text" name="members" value="value" [(ngModel)]="value" #describtionField="ngModel" [disabled]="processing" id="test"/>
-      <div *ngIf="feedbackEnabled && memberField.errors">
-        <p *ngIf="memberField.errors.required" class="validation">Please enter a member</p>
-      </div>
-    </div>
   
-    <div id="addedmembers"></div>
-  
-
+  <!--<app-new-members [members]="members"></app-new-members>-->
 
   <div class="field submit">
     <button type="submit">Create one</button>
