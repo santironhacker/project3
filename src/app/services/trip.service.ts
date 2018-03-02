@@ -22,6 +22,7 @@ export class TripService {
     .toPromise()
   }
 
+  // used for get places, get members and get the trip itself
   getUserTrips(id): Promise<any> {
     const options = {
       withCredentials: true
@@ -29,5 +30,6 @@ export class TripService {
     return this.httpClient.get(`${this.API_URL}/member/${id}`, options)
     .toPromise()
   }
+
 
 }
