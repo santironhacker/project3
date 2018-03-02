@@ -35,12 +35,20 @@ html {
   /* ---- layout ---- */
   
   #site-header {
-    padding: 0;
-    right: 0;
-    top: 0;
-    left: 0;
+    // padding: 0;
+    // right: 0;
+    // top: 0px;
+    // left: 0;
+    // position: fixed;
+    // width: 100%;
+    position: -webkit-sticky;
+    position: sticky; top: 0px;
     background: lightskyblue;
-    position: fixed;
+  }
+
+  #site-main {
+    padding: 20px;
+   
   }
   
   #site-footer {
@@ -54,16 +62,16 @@ html {
     text-align: center;
   }
   
-  #site-main {
-    padding: 20px;
-  }
   
   
   
   
-  /* ---- components ---- */
-  
-  /* You can add global styles to this file, and also import other style files */
+/* ---- components ---- */
+
+.flex {
+  display: flex;
+}
+
 
 /* -- forms -- */
 

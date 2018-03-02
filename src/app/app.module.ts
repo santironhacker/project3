@@ -33,6 +33,7 @@ import { AboutMembersComponent } from './components/trips/about-members/about-me
 import { AboutPlacesComponent } from './components/trips/about-places/about-places.component';
 import { AboutTripsComponent } from './components/users/about-trips/about-trips.component';
 import { CardTripsComponent } from './components/users/card-trips/card-trips.component';
+import { LandingInfoComponent } from './components/landing-info/landing-info.component';
 
 
 // -- routes
@@ -63,7 +64,8 @@ const routes: Routes = [
     AboutMembersComponent,
     AboutPlacesComponent,
     AboutTripsComponent,
-    CardTripsComponent
+    CardTripsComponent,
+    LandingInfoComponent
   ],
   imports: [
     HttpClientModule,
