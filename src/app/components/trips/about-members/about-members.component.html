@@ -1,7 +1,8 @@
 <p>
   about-members works!
 </p>
-
-  <div *ngFor="let member of trip.members">
+  <ng-container *ngIf="trip">
+    <div *ngFor="let member of trip.members">
       <p>{{ member.name }}</p>
     </div>
+  </ng-container>

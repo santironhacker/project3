@@ -16,3 +16,4 @@ export class AboutMembersComponent implements OnInit {
   }
 
 }
+
