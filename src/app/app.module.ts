@@ -31,6 +31,8 @@ import { NewMembersComponent } from './components/trips/forms/new-members/new-me
 import { AddPlaceComponent } from './components/trips/forms/add-place/add-place.component';
 import { AboutMembersComponent } from './components/trips/about-members/about-members.component';
 import { AboutPlacesComponent } from './components/trips/about-places/about-places.component';
+import { AboutTripsComponent } from './components/users/about-trips/about-trips.component';
+import { CardTripsComponent } from './components/users/card-trips/card-trips.component';
 
 
 // -- routes
@@ -59,7 +61,9 @@ const routes: Routes = [
     TripMainPageComponent,
     AboutInfoComponent,
     AboutMembersComponent,
-    AboutPlacesComponent
+    AboutPlacesComponent,
+    AboutTripsComponent,
+    CardTripsComponent
   ],
   imports: [
     HttpClientModule,
