@@ -22,7 +22,7 @@ export class UserPageComponent implements OnInit {
       this.trips = trips;
       console.log(trips);
       console.log(trips[0].name);
-      console.log(trips[1].name);
+      //console.log(trips[1].name);
     })
   }
 
