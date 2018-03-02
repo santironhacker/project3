@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-about-info',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-info.component.scss']
 })
 export class AboutInfoComponent implements OnInit {
+
+  @Input() trip: any;
 
   constructor() { }
 
