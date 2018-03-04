@@ -37,5 +37,9 @@ export class TripService {
     .toPromise()
   }
 
-
+  //list place to a trip
+  addPlace(id, data: any): Promise<any> {
+    return this.httpClient.post(`${this.API_URL}/${id}`, data)
+    .toPromise()
+  }
 }

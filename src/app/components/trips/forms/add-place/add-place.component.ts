@@ -1,4 +1,4 @@
-import { ElementRef, NgZone, OnInit, ViewChild, Component } from '@angular/core';
+import { ElementRef, NgZone, OnInit, ViewChild, Component, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { } from 'googlemaps';
 import { MapsAPILoader } from '@agm/core';
@@ -11,6 +11,7 @@ import { MapsAPILoader } from '@agm/core';
 
 
 export class AddPlaceComponent implements OnInit {
+  
   public latitude: number;
   public longitude: number;
   public searchControl: FormControl;
@@ -19,19 +20,9 @@ export class AddPlaceComponent implements OnInit {
   lng: number;
   name: String;
   description: String;
-
-
-  // const placeSchema = new Schema({
-  //   name: String,
-  //   description: String,
-  //   location: {
-  //     type: {
-  //       type: String,
-  //       default: 'Point'
-  //     },
-  //     coordinates: [Number]
-  //   }
-  // });
+  place: any;
+  
+  @Output() newPlace = new EventEmitter(this.place);
 
   @ViewChild("search")
   public searchElementRef: ElementRef;
@@ -73,7 +64,7 @@ export class AddPlaceComponent implements OnInit {
           this.lng = place.geometry.location.lng();
 
           console.log(this.lat);
-          
+
           //set latitude, longitude and zoom
           this.latitude = place.geometry.location.lat();
           this.longitude = place.geometry.location.lng();
@@ -95,6 +86,27 @@ export class AddPlaceComponent implements OnInit {
   }
 
   addPlace(event){
+      // const placeSchema = new Schema({
+  //   name: String,
+  //   description: String,
+  //   location: {
+  //     type: {
+  //       type: String,
+  //       default: 'Point'
+  //     },
+  //     coordinates: [Number]
+  //   }
+  // });
+    let place = {
+      name: this.name,
+      description: this.description,
+      coordinates: [this.lat, this.lng]
+    }
+    console.log(place);
+    this.place.emit('place');
   }
 
+  // onClick() {
+  //   this.notify.emit('Click from nested component');
+  // }
 }

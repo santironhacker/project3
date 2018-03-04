@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TripService } from '../../services/trip.service';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
@@ -9,21 +9,20 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./trip-create-page.component.scss']
 })
 export class TripCreatePageComponent implements OnInit {
-
-  // @Input() trip: any;
+  @Input() place: any;
   users: Array<any>;
 
+  
   constructor(
     private tripService: TripService,
     private userService: UserService,
     private router: Router) { }
-
-  ngOnInit() {
-    this.userService.getUsers()
-    .then((users) => {
-      this.users = users;
-      console.log(users);
-      console.log(users[0].username);
+    
+    ngOnInit() {
+      this.userService.getUsers()
+      .then((users) => {
+        this.users = users;
+        console.log(this.place);
     }) 
   }
 
