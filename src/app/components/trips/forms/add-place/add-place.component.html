@@ -20,3 +20,10 @@
   <div id="commentfield">
     <input class="comment">
   </div>
+
+  <div class="field submit">
+    <button type="submit">Add place to the trip </button>
+    <div *ngIf="feedbackEnabled && form.invalid">
+      <p class="validation">there are errors in the form, please review the fields</p>
+    </div>
+  </div>
