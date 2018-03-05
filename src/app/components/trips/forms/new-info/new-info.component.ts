@@ -37,6 +37,7 @@ export class NewInfoComponent implements OnInit {
     }
     console.log(this.tripObject)
     this.trip.emit(this.tripObject);
+    
   }
 
   setInput(user){
