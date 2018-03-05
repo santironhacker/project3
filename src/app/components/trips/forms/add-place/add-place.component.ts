@@ -61,8 +61,9 @@ export class AddPlaceComponent implements OnInit {
           if (place.geometry === undefined || place.geometry === null) {
             return;
           }
-          console.log(place.photos[0], place.name);
+          console.log(place.name);
           console.log(place.geometry.location.lat());
+          console.log(place.geometry.location.lng());
           this.lat = place.geometry.location.lat();
           this.name = place.name;
           this.lng = place.geometry.location.lng();
@@ -107,12 +108,7 @@ export class AddPlaceComponent implements OnInit {
       coordinates: [this.lat, this.lng]
     }
     console.log(place);
-<<<<<<< HEAD
-    this.place = place;
-    this.newPlace.emit(this.place);
-=======
-    this.place.emit(place);
->>>>>>> master
+    this.newPlace.emit(place);
   }
 
   // onClick() {
