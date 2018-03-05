@@ -4,6 +4,12 @@
   <div *ngIf="user"> 
     <button (click)="logout()"> Logout</button>
   </div>
+
+  <!-- main app container -->
+
+  <app-sign-up></app-sign-up>
+
+
 </header>
 
 <div id="site-main">
@@ -22,11 +28,11 @@
       </div>
     </div>
     
-    <div class="flex">
+    <!-- <div class="flex">
       <div *ngIf="!user"><app-sign-up></app-sign-up> </div>
-      <router-outlet></router-outlet>
-    </div>
-</div>
+    </div> -->
+  </div>
+  <router-outlet></router-outlet>
   
 <footer id="site-footer">
   nice footer

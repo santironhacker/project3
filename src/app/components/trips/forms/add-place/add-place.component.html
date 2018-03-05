@@ -1,3 +1,29 @@
 <p>
   add-place works!
 </p>
+
+<p>
+    test works!
+  </p>
+  <div class="container">
+    <h1>Enter a new Place for your trip</h1>
+    <div class="form-group">
+      <input placeholder="Add a new place" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+    </div>
+    <div id="mapid">
+    <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
+      <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+    </agm-map>
+  </div>
+  </div>
+  
+  <div id="commentfield">
+    <input class="comment" placeholder="Add a description" type="text" name="description" [(ngModel)]="description">
+  </div>
+
+  <div class="field submit">
+    <button (click)='addPlace()'>Add place to the trip </button>
+    <div *ngIf="feedbackEnabled && form.invalid">
+      <p class="validation">there are errors in the form, please review the fields</p>
+    </div>
+  </div>

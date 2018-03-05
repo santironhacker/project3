@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
+import { AgmCoreModule } from '@agm/core';
 
 // -- services
 import { AuthService } from './services/auth.service';
@@ -28,12 +29,12 @@ import { LoginComponent } from './components/login/login.component';
 import { AboutInfoComponent } from './components/trips/main/about-info/about-info.component';
 import { NewInfoComponent } from './components/trips/forms/new-info/new-info.component';
 import { NewMembersComponent } from './components/trips/forms/new-members/new-members.component';
-import { AddPlaceComponent } from './components/trips/forms/add-place/add-place.component';
 import { AboutMembersComponent } from './components/trips/about-members/about-members.component';
 import { AboutPlacesComponent } from './components/trips/about-places/about-places.component';
 import { AboutTripsComponent } from './components/users/about-trips/about-trips.component';
 import { CardTripsComponent } from './components/users/card-trips/card-trips.component';
 import { LandingInfoComponent } from './components/landing-info/landing-info.component';
+import { AddPlaceComponent } from './components/trips/forms/add-place/add-place.component';
 
 
 // -- routes
@@ -58,19 +59,24 @@ const routes: Routes = [
     TripCreatePageComponent,
     NewInfoComponent,
     NewMembersComponent,
-    AddPlaceComponent,
     TripMainPageComponent,
     AboutInfoComponent,
     AboutMembersComponent,
     AboutPlacesComponent,
     AboutTripsComponent,
     CardTripsComponent,
-    LandingInfoComponent
+    LandingInfoComponent,
+    AddPlaceComponent
   ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyA41mP91kzCQzJT-JwIeUw2Nt19lKFvSf0",
+      libraries: ["places"]
+    }),
     HttpClientModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
 
   ],

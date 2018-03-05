@@ -23,11 +23,11 @@ html {
     margin: 0;
   }
   
-  h1 {}
+  // h1 {}
   
-  h2 {}
+  // h2 {}
   
-  h3 {}
+  // h3 {}
   
   
   
@@ -54,7 +54,7 @@ html {
   #site-footer {
     padding: 60px 0px;
     background: lightskyblue;
-    // position: absolute;
+    position: absolute;
     // right: 0;
     // bottom: 0;
     // left: 0;
@@ -117,4 +117,14 @@ form .validation {
 
 form .field.has-error input {
 	border: 1px solid  red;
+}
+
+agm-map {
+  height: 300px;
+  width: 300px;
+}
+
+.mapid {
+  border-radius: 50%;
+  border: black 20px;
 }

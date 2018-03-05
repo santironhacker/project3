@@ -24,7 +24,7 @@ export class TripMainPageComponent implements OnInit {
       .subscribe((params) => {
         this.tripId = params['id'];
         console.log(this.tripId);
-        this.tripService.getOne(this.tripId)
+        this.tripService.getTripUser(this.tripId)
         .then(res => this.trip = res);
         console.log(this.trip);
       })

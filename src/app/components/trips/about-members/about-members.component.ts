@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-about-members',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMembersComponent implements OnInit {
 
+  @Input() members: any;
+
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+

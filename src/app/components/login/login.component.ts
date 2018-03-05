@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+// import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-login',
@@ -8,15 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  username: String;
+  password: String;
   feedbackEnabled = false;
   error = null;
   processing = false;
-  username: String;
-  password: String;
+  // post: any;
 
   constructor(
     private authService: AuthService, 
-    private router: Router ) { }
+    private router: Router) {}
+    // private fb: FormBuilder ) { }
 
   ngOnInit() {
   }

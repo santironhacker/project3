@@ -21,6 +21,7 @@
   </div>
   
   <!--<app-new-members [members]="members"></app-new-members>-->
+  <div id="addedmembers"></div>
 
   <div class="field submit">
     <button type="submit">Create one</button>
@@ -31,7 +32,7 @@
 </form>
 
 
-<div *ngFor="let user of users">
+<div *ngFor="let user of users && (user != user)">
   <li>{{ user.username }}</li>
   <button (click)="setInput(user)">Add Member to the trip</button>
 </div>
