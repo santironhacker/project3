@@ -7,14 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AboutPlacesComponent implements OnInit {
   
-  @Input() trip: any;
+  @Input() places: any;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.trip);
-    console.log(this.trip.places.length)
-    console.log(this.trip.places[0].name)
+    console.log(this.places);
+    console.log(this.places.length)
   }
 
 }

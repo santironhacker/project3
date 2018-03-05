@@ -1,12 +1,16 @@
-<p>
-  trip-main-page works!
-</p>
-
 <ng-container *ngIf="trip">
-  <app-about-info [trip]="trip"></app-about-info>
-  <app-about-members [members]="trip.members"></app-about-members>
-  <app-add-place (newPlace)="handleAdd($event)" ></app-add-place>
-  <app-about-places [trip]="trip"></app-about-places>
+  <div class="stylehelp"> 
+    <app-about-info [trip]="trip"></app-about-info>
+  </div>
+  <div class="stylehelp">
+    <app-about-members [members]="trip.members"></app-about-members>
+  </div>
+  <div class="stylehelp">
+    <app-about-places [places]="trip.places"></app-about-places>
+  </div>
+  <div class="stylehelp">
+    <app-add-place (newPlace)="handleAdd($event)" ></app-add-place>
+  </div>
 </ng-container>
 
 

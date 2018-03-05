@@ -1,8 +1,9 @@
-<p>
-  about-members works!
-</p>
-    <div *ngFor="let member of members">
-      <p>{{ member.username }}</p>
-    </div>
 
+<h2> Members of your trip: </h2>
+    
+<div *ngIf="members">
+  <div *ngFor="let member of members">
+    <p>{{ member.username }}</p>
+  </div>
+</div>
 
