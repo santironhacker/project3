@@ -1,5 +1,6 @@
 <h2> Places of your trip: </h2>
 
+<div class="content-main">
 <div *ngIf="places">
     <div *ngFor="let place of places"> 
         <div> {{place.name}} </div>
@@ -7,7 +8,11 @@
 </div>
 
 <div *ngIf="!places">
-    <div> there are currently no place in this trip</div>
+    <div> There are currently no place in this trip</div>
 </div>
+
+</div>
+
+<button class="button-main-trip" (click)="showMap" type="button"> Show Places on Map </button>
 
 

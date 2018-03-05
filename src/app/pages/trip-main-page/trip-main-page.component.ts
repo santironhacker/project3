@@ -40,9 +40,9 @@ export class TripMainPageComponent implements OnInit {
     this.route.params
         .subscribe((params) => {
           this.tripId = params['id'];
-          console.log(this.tripId);
           this.tripService.addPlace(this.tripId, place)
           .then(res => this.trip = res);
+          // @todo reload the page???
         })
       }
 }
