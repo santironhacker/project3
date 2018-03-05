@@ -31,13 +31,13 @@ export class TripMainPageComponent implements OnInit {
       })
   }
     
-  handleAdd(event){
-    console.log(event);
+  handleAdd(place){
+    console.log(place);
     this.route.params
         .subscribe((params) => {
           this.tripId = params['id'];
           console.log(this.tripId);
-          this.tripService.addPlace(this.tripId, this.place)
+          this.tripService.addPlace(this.tripId, place)
           .then(res => this.trip = res);
         })
       }
