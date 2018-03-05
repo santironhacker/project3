@@ -20,9 +20,13 @@ export class AddPlaceComponent implements OnInit {
   lng: number;
   name: String;
   description: String;
-  place: any;
+  feedbackEnabled: boolean = false;
   
+<<<<<<< HEAD
   @Output() newPlace = new EventEmitter<any>();
+=======
+  @Output() place = new EventEmitter<any>();
+>>>>>>> master
 
   @ViewChild("search")
   public searchElementRef: ElementRef;
@@ -85,7 +89,7 @@ export class AddPlaceComponent implements OnInit {
     }
   }
 
-  addPlace(event){
+  addPlace(){
       // const placeSchema = new Schema({
   //   name: String,
   //   description: String,
@@ -103,8 +107,12 @@ export class AddPlaceComponent implements OnInit {
       coordinates: [this.lat, this.lng]
     }
     console.log(place);
+<<<<<<< HEAD
     this.place = place;
     this.newPlace.emit(this.place);
+=======
+    this.place.emit(place);
+>>>>>>> master
   }
 
   // onClick() {

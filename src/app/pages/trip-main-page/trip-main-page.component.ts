@@ -18,17 +18,22 @@ export class TripMainPageComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // this.tripService.getOne(this.id)
-    //   .then((trip) => {
-    //   this.trip = trip;
-      this.route.params
-      .subscribe((params) => {
-        this.tripId = params['id'];
-        console.log(this.tripId);
-        this.tripService.getTripUser(this.tripId)
-        .then(res => this.trip = res);
-        console.log(this.trip);
+    
+    this.route.params
+    .subscribe((params) => {
+      this.tripId = params['id'];
+      console.log(this.tripId);
+      
+      this.tripService.getOne(this.tripId)
+       .then((trip) => {
+       this.trip = trip;
+       console.log(this.trip)
+       })
+
+      this.tripService.getTripUser(this.tripId)
+       .then(res => this.trip = res);
       })
+<<<<<<< HEAD
   }
     
   handleAdd(place){
@@ -41,4 +46,13 @@ export class TripMainPageComponent implements OnInit {
           .then(res => this.trip = res);
         })
       }
+=======
+
+    }
+    
+  handleAdd(event){
+    console.log(event)
+  }
+
+>>>>>>> master
 }

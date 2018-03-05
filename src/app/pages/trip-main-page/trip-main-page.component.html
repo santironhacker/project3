@@ -5,7 +5,12 @@
 <ng-container *ngIf="trip">
   <app-about-info [trip]="trip"></app-about-info>
   <app-about-members [members]="trip.members"></app-about-members>
+<<<<<<< HEAD
   <app-add-place (newPlace)="handleAdd($event)" ></app-add-place>
+=======
+  <!-- <app-add-place (place)="handleAdd($event)" ></app-add-place> -->
+  <app-about-places [trip]="trip"></app-about-places>
+>>>>>>> master
 </ng-container>
 
 

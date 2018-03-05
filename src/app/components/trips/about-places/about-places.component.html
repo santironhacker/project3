@@ -1,3 +1,21 @@
 <p>
   about-places works!
 </p>
+
+
+
+<div *ngIf="trip">
+  <div *ngIf="trip.places.length > 0">
+    <div *ngFor="let place of trip.places"> 
+        <div> {{place.name}} </div>
+    </div>
+  </div>
+  <!-- <div *ngIf="!trip.places.length === 0">
+              <div> there are currently no place in this trip</div>
+            </div> -->
+    <!-- <h1> Name: {{trip.name}} </h1>
+    <h2> Description: </h2>
+    <p> {{trip.description}}</p> -->
+</div>
+
+
