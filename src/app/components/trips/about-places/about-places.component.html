@@ -4,9 +4,7 @@
 <div class="container">
   <div *ngIf="places" class="flexcontainer">
       <div *ngFor="let place of places" class="flexchild"> 
-          <div>
-              <img class="placeholder-pic" src="https://lh3.googleusercontent.com/oLzmTqqZMgQM2vo0Smso51AUo9G1tHoyqFfkEswWRxL1iDMgq87IyqEqtwVRWkThIks=w300" alt="placeholder">
-          </div>
+          <img class="placeholder-pic" src="https://lh3.googleusercontent.com/oLzmTqqZMgQM2vo0Smso51AUo9G1tHoyqFfkEswWRxL1iDMgq87IyqEqtwVRWkThIks=w300" alt="placeholder">
           <div> {{place.name}} </div>
       </div>
   </div>

@@ -45,4 +45,5 @@ export class TripMainPageComponent implements OnInit {
           // @todo reload the page???
         })
       }
+      // @ go back button
 }

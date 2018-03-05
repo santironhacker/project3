@@ -5,10 +5,12 @@
 
 .flexcontainer {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .flexchild {
   flex: 1;
-  flex-wrap: wrap;
+  align-items: center;
 }
