@@ -33,7 +33,6 @@ export class TripMainPageComponent implements OnInit {
       this.tripService.getTripUser(this.tripId)
        .then(res => this.trip = res);
       })
-<<<<<<< HEAD
   }
     
   handleAdd(place){
@@ -46,13 +45,4 @@ export class TripMainPageComponent implements OnInit {
           .then(res => this.trip = res);
         })
       }
-=======
-
-    }
-    
-  handleAdd(event){
-    console.log(event)
-  }
-
->>>>>>> master
 }
