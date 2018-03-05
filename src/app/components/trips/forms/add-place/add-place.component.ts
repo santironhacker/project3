@@ -103,7 +103,7 @@ export class AddPlaceComponent implements OnInit {
       coordinates: [this.lat, this.lng]
     }
     console.log(place);
-    this.place.emit('place');
+    this.newPlace.emit('this.place');
   }
 
   // onClick() {
