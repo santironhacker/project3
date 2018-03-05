@@ -5,7 +5,7 @@
 <ng-container *ngIf="trip">
   <app-about-info [trip]="trip"></app-about-info>
   <app-about-members [members]="trip.members"></app-about-members>
-  <app-add-place (place)="handleAdd($event)" ></app-add-place>
+  <app-add-place (newPlace)="handleAdd($event)" ></app-add-place>
 </ng-container>
 
 

@@ -11,6 +11,7 @@ export class TripMainPageComponent implements OnInit {
 
   trip: any;
   tripId: String;
+  place: any;
 
   constructor(
     private tripService: TripService,
@@ -29,6 +30,15 @@ export class TripMainPageComponent implements OnInit {
         console.log(this.trip);
       })
   }
-
-
+    
+  handleAdd(event){
+    console.log(event);
+    this.route.params
+        .subscribe((params) => {
+          this.tripId = params['id'];
+          console.log(this.tripId);
+          this.tripService.addPlace(this.tripId, this.place)
+          .then(res => this.trip = res);
+        })
+      }
 }

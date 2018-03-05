@@ -22,7 +22,7 @@ export class AddPlaceComponent implements OnInit {
   description: String;
   place: any;
   
-  @Output() newPlace = new EventEmitter(this.place);
+  @Output() newPlace = new EventEmitter<any>();
 
   @ViewChild("search")
   public searchElementRef: ElementRef;
@@ -103,7 +103,8 @@ export class AddPlaceComponent implements OnInit {
       coordinates: [this.lat, this.lng]
     }
     console.log(place);
-    this.newPlace.emit('this.place');
+    this.place = place;
+    this.newPlace.emit(this.place);
   }
 
   // onClick() {

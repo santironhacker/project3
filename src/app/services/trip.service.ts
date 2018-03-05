@@ -10,7 +10,10 @@ export class TripService {
   constructor(private httpClient: HttpClient) { }
 
   getOne(id): Promise<any> {
-    return this.httpClient.get(`${this.API_URL}/${id}`)
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.API_URL}/${id}`, options)
     .toPromise()
   }
 
@@ -33,13 +36,20 @@ export class TripService {
 
   // to get all members of a trip
   getTripUser(id): Promise<any> {
-    return this.httpClient.get(`${this.API_URL}/${id}/members`)
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.API_URL}/${id}/members`, options)
     .toPromise()
   }
 
   //list place to a trip
   addPlace(id, data: any): Promise<any> {
-    return this.httpClient.post(`${this.API_URL}/${id}`, data)
+    const options = {
+      withCredentials: true
+    };
+    console.log(data)
+    return this.httpClient.post(`${this.API_URL}/${id}`, data, options)
     .toPromise()
   }
 }

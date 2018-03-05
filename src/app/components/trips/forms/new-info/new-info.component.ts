@@ -21,7 +21,7 @@ export class NewInfoComponent implements OnInit {
   members: Array<any> = [];
 
   @Input() users: any;
-  @Output() trip = new EventEmitter<any>(this.tripObject);
+  @Output() trip = new EventEmitter<any>();
   
   constructor(private tripService: TripService, private router: Router) {
   }
@@ -35,6 +35,8 @@ export class NewInfoComponent implements OnInit {
       description: this.description,
       members: this.members
     }
+    console.log(this.tripObject)
+    this.trip.emit(this.tripObject);
   }
 
   setInput(user){
