@@ -32,7 +32,7 @@
 </form>
 
 
-<div *ngFor="let user of users && (user != user)">
+<div *ngFor="let user of users">
   <li>{{ user.username }}</li>
   <button (click)="setInput(user)">Add Member to the trip</button>
 </div>

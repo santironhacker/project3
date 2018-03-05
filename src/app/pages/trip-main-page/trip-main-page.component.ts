@@ -28,7 +28,11 @@ export class TripMainPageComponent implements OnInit {
         .then(res => this.trip = res);
         console.log(this.trip);
       })
-  }
 
+    }
+    
+  handleAdd(event){
+    console.log(event)
+  }
 
 }
