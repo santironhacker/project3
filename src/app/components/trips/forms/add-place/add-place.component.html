@@ -23,7 +23,7 @@
 
   <div class="field submit">
     <button (click)='addPlace()'>Add place to the trip </button>
-    <div *ngIf="feedbackEnabled && form.invalid">
+    <div *ngIf="feedbackEnabled">
       <p class="validation">there are errors in the form, please review the fields</p>
     </div>
   </div>

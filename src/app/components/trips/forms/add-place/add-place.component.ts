@@ -21,6 +21,7 @@ export class AddPlaceComponent implements OnInit {
   name: String;
   description: String;
   place: any;
+  feedbackEnabled: boolean = false;
   
   @Output() newPlace = new EventEmitter(this.place);
 
@@ -85,7 +86,7 @@ export class AddPlaceComponent implements OnInit {
     }
   }
 
-  addPlace(event){
+  addPlace(){
       // const placeSchema = new Schema({
   //   name: String,
   //   description: String,
