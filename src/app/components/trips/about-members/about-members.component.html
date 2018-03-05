@@ -1,11 +1,15 @@
 
 <h2> Members of your trip: </h2>
 
-<div class="content-main">
-<div *ngIf="members">
-  <div *ngFor="let member of members">
-    <p>{{ member.username }}</p>
+<div class="flexcontainer">
+  <div *ngIf="members">
+    <div *ngFor="let member of members">
+      <div>
+        <img class="placeholder-pic" src="http://rgmillerinc.com/wp-content/uploads/2017/01/placeholderperson-circle.gif" alt="placeholder">
+      </div>
+      <p>{{ member.username }}</p>
+    </div>
   </div>
 </div>
-</div>
+
 
