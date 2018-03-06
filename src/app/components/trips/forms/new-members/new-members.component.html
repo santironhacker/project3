@@ -9,21 +9,10 @@
 <hr>
 <div>Hallo</div>
 
-<mat-form-field>
-    <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
-  </mat-form-field>
-  
-  <mat-autocomplete #auto="matAutocomplete">
-    <mat-option *ngFor="let user of users" [value]="user.username">
-      {{ user.username }}
-    </mat-option>
-  </mat-autocomplete>
-<hr>
-
 <form class="example-form">
   <mat-form-field class="example-full-width">
     <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+    <mat-autocomplete #auto="matAutocomplete">
       <mat-option *ngFor="let user of filteredUsers | async" [value]="user.username">
         {{ user.username }}
       </mat-option>
@@ -31,42 +20,4 @@
   </mat-form-field>
 </form>
 
-<hr>
 
-<h2>Hero Detail</h2>
-<h3><i>Just a FormControl</i></h3>
-<label class="center-block">
-  Name:<input class="form-control" [formControl]="myControl">
-</label>
-
-<!-- <div [formGroup]="parts">
-  <input class="area" formControlName="area" size="3">
-  <span>&ndash;</span>
-  <input class="exchange" formControlName="exchange" size="3">
-  <span>&ndash;</span>
-  <input class="subscriber" formControlName="subscriber" size="4">
-</div> -->
-
-
-<!-- <div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Input">
-  </mat-form-field>
-
-  <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-select placeholder="Select">
-      <mat-option value="option">Option</mat-option>
-    </mat-select>
-  </mat-form-field>
-</div> -->
-
-
-
-<!-- <mat-form-field>
-  <input type="text" matInput [formControl]="myControl">
-</mat-form-field> -->
-<hr>

@@ -31,16 +31,22 @@ export class NewMembersComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.users);
-    // this.filteredUsers = this.myControl.valueChanges
-    // .pipe(
-    //   startWith(''),
-    //   map(val => this.filter(val))
-    // );
+    const doThis = () => {
+      console.log(this.users, 'ok')
+      
+      this.filteredUsers = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(val => this.filter(val))
+      );
+    
+    }
+    var timeoutID = window.setTimeout( doThis, 1);
+    
   }
 
-  // filter(val: string): string[] {
-  //   return this.users.filter(option => option.toLowerCase().indexOf(val.toLowerCase()) === 0);
+  filter(val: string): string[] {
+    return this.users.filter(user => user.username.toLowerCase().indexOf(val.toLowerCase()) === 0);
   }
 
 }
