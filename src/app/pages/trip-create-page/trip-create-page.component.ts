@@ -32,12 +32,5 @@ export class TripCreatePageComponent implements OnInit {
         console.log(trip);
         console.log(result)
     })
-    // .catch((err) => {
-    //   this.error = err.error.error;
-    // });
-  
-  
-
   }
-
 }

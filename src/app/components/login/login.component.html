@@ -27,7 +27,7 @@
   </div>
 </form>
 </div> -->
-<button onclick="document.getElementById('login-popup').style.display='block'" style="width:auto;">Login</button>
+<button onclick="document.getElementById('login-popup').style.display='block'" style="width:auto;" class="button">Login</button>
 
 <div id="login-popup" class="modal">
   <form class="modal-content animate" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">

@@ -1,43 +1,26 @@
-<header id="site-header">
-  nice header
-  <div *ngIf="!user"> 
-    <app-login></app-login>
-    <app-sign-up></app-sign-up>
+<header id="site-header" class="flexbox">
+  <div *ngIf="!user" class="flexbox"> 
+    <app-login class="flexbox"></app-login>
+    <app-sign-up class="flexbox"></app-sign-up>
   </div>
-  <div *ngIf="user"> 
-    <button (click)="logout()"> Logout</button>
+  <div *ngIf="user" class="flexbox"> 
+    <button (click)="logout()" class="button"> Logout </button>
   </div>
-
-  <!-- main app container -->
-
-
-
 </header>
 
 <div id="site-main">
-  
   <div class="container">
     <div [ngClass]="{'is-user': user, 'is-anon': anon}">
       <div *ngIf="loading">
         <span class="username text">loading...</span>
       </div>
-      <div *ngIf="!loading && !!user">
-        <!-- <a [routerLink]="['/profile']">{{user.username}}</a>
-          <a [routerLink]="['/logout']">logout</a> -->
-        </div>
-        <div *ngIf="!loading && anon">
-        </div>
-      </div>
+      <div *ngIf="!loading && !!user"></div>
     </div>
-    
-    <!-- <div class="flex">
-      <div *ngIf="!user"><app-sign-up></app-sign-up> </div>
-    </div> -->
   </div>
-  <router-outlet></router-outlet>
+</div>
+<router-outlet></router-outlet>
   
 <footer id="site-footer">
-  nice footer
   <div *ngIf="!user"> Test </div>
   <div *ngIf="user"> FB, twitter, instagramm</div>
 </footer>

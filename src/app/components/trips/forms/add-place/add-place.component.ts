@@ -9,7 +9,6 @@ import { MapsAPILoader } from '@agm/core';
   styleUrls: ['./add-place.component.scss']
 })
 
-
 export class AddPlaceComponent implements OnInit {
   
   public latitude: number;
@@ -22,11 +21,7 @@ export class AddPlaceComponent implements OnInit {
   description: String;
   feedbackEnabled: boolean = false;
   
-<<<<<<< HEAD
   @Output() newPlace = new EventEmitter<any>();
-=======
-  @Output() place = new EventEmitter<any>();
->>>>>>> master
 
   @ViewChild("search")
   public searchElementRef: ElementRef;
@@ -91,17 +86,6 @@ export class AddPlaceComponent implements OnInit {
   }
 
   addPlace(){
-      // const placeSchema = new Schema({
-  //   name: String,
-  //   description: String,
-  //   location: {
-  //     type: {
-  //       type: String,
-  //       default: 'Point'
-  //     },
-  //     coordinates: [Number]
-  //   }
-  // });
     let place = {
       name: this.name,
       description: this.description,
@@ -110,8 +94,4 @@ export class AddPlaceComponent implements OnInit {
     console.log(place);
     this.newPlace.emit(place);
   }
-
-  // onClick() {
-  //   this.notify.emit('Click from nested component');
-  // }
 }

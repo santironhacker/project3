@@ -1,9 +1,10 @@
 
 
-<div *ngFor="let trip of trips">
-  <li>Trip to <strong>{{ trip.name }}</strong>
+<div *ngFor="let trip of trips" class="flexcontainer">
+  <div class="flexcontainer">
+  <!-- <p> Trip to <span class="headlining flexcontainer"> {{ trip.name }} </span> -->
       <app-card-trips [trip]="trip"></app-card-trips>
       <a [routerLink]="['/trips', trip._id]">See trip details</a>
-      <p></p>
-  </li>
+  <!-- </p> -->
+  <div>
 </div>

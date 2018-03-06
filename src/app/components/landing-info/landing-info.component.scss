@@ -1,0 +1,28 @@
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexi-container {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  background: grey;
+}
+
+.pic-info {
+  width: 300px;
+  height: 220px;
+  border-radius: 50%;
+}
+
+.maincontainer-infobox {
+  background-image: url('/assets/images/matheus-ferrero-228716-unsplash.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  size: 20px;
+  padding: 25px;
+  margin: 25px;
+}

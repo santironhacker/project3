@@ -1,134 +1,148 @@
 @import './scss/variables.scss';
 
-/* You can add global styles to this file, and also import other style files */
-
-/* You can add global styles to this file, and also import other style files */
-
-/* ---- reset ---- */
+// to reset default browser settings
 
 html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  height: 0;
+  border: 2px solid black;
+}
   
-  
-  
-  
-  /* ---- typography ---- */
-  
-  body {
+//   /* ---- typography ---- */
+
+body {
+    display: flex;
     color: $color-body;
     margin: 0;
-  }
+}
   
-  // h1 {}
-  
-  // h2 {}
-  
-  // h3 {}
-  
-  
-  
-  
-  /* ---- layout ---- */
-  
-  #site-header {
-    // padding: 0;
-    // right: 0;
-    // top: 0px;
-    // left: 0;
-    // position: fixed;
-    // width: 100%;
-    position: -webkit-sticky;
-    position: sticky; top: 0px;
-    background: lightskyblue;
-  }
+/* ---- layout ---- */
 
-  #site-main {
-    padding: 20px;
-   
-  }
-  
-  #site-footer {
-    padding: 60px 0px;
-    background: lightskyblue;
-    position: bottom;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  
-  
-  
-  
-/* ---- components ---- */
-
-.flex {
+// main header, footer and site main
+#site-header {
   display: flex;
+  flex-direction: column;
+  padding: 15px;
+  right: 0;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky; top: 0px;
+  background: lightskyblue;
+}
+
+#site-main {
+  padding: 20px;
+}
+  
+#site-footer {
+  padding: 6px 0px;
+  background: lightskyblue;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+  
+app-root {
+  width: 100%;
+}
+  
+// /* ---- components ---- */
+
+// .flex {
+//    display: flex;
+// }
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
 }
 
 
-/* -- forms -- */
+/* -- forms generell -- */
 
 form.is-processing {
-	opacity: 0.5;
+ 	opacity: 0.5;
 }
 
 form .field {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-form label {
-	display: block;
-	margin-bottom: 10px;
-	font-style: bold;
-}
+// form label {
+// 	display: block;
+// 	margin-bottom: 10px;
+// 	font-style: bold;
+// }
 
-form input {
-  padding: 5px;
-  font-size: 16px;
-}
+// form input {
+//   padding: 5px;
+//   font-size: 16px;
+// }
 
-form .submit {
-  padding-top: 20px;
-}
+// form .submit {
+//   padding-top: 20px;
+// }
 
-form .submit button {
-  padding: 5px 20px;
-  text-align: center;
-  font-size: 16px;
-  background-color: cyan;
-  cursor: pointer;
-}
+// form .submit button {
+//   padding: 5px 20px;
+//   text-align: center;
+//   font-size: 16px;
+//   background-color: cyan;
+//   cursor: pointer;
+// }
 
-form .field.has-error label {
-	color: red;
-}
+// form .field.has-error label {
+// 	color: red;
+// }
 
-form .validation {
-	margin: 5px 0 10px;
-	color: red;
-}
+// form .validation {
+// 	margin: 5px 0 10px;
+// 	color: red;
+// }
 
-form .field.has-error input {
-	border: 1px solid  red;
-}
+// form .field.has-error input {
+// 	border: 1px solid  red;
+// }
 
 agm-map {
   height: 300px;
   width: 300px;
-}
+ }
 
-.mapid {
-  border-radius: 50%;
-  border: black 20px;
-}
+
 
 .stylehelp {
-  border: 2px solid black;
+   border: 2px solid black;
 }
+
+// .button {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   -ms-transform: translate(-50%, -50%);
+//   background-color: #f1f1f1;
+//   color: black;
+//   font-size: 14px;
+//   padding: 15px 15px;
+//   border: none;
+//   cursor: pointer;
+//   border-radius: 5px;
+//   text-align: center;
+// }
+
+// .button:hover {
+//   background-color: black;
+//   color: white;
+// }
