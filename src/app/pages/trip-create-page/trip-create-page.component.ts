@@ -20,7 +20,6 @@ export class TripCreatePageComponent implements OnInit {
       this.userService.getUsers()
       .then((users) => {
         this.users = users;
-        console.log(this.users);
     }) 
   }
 
@@ -28,7 +27,6 @@ export class TripCreatePageComponent implements OnInit {
     this.tripService.createTrip(trip)
     .then((result) => {
         this.router.navigate(['/users']);
-        console.log(result);
     })
   }
 }

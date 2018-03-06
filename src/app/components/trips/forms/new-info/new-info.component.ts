@@ -1,6 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TripService } from '../../../../services/trip.service';
 import { Router } from '@angular/router';
+<<<<<<< HEAD
+=======
+// import { create } from 'domain';
+>>>>>>> 1fb408618281f726e428977e5d3abef3e2693449
 // import { EventEmitter } from 'events';
 
 @Component({
@@ -47,26 +51,4 @@ export class NewInfoComponent implements OnInit {
     div.appendChild(added);
     this.members.push(user._id);
   }
-
-  // submitForm(form) {
-  //   this.error = '';
-  //   this.feedbackEnabled = true;
-  //   if (form.valid) {
-  //     this.processing = true;
-  //     this.tripService.createTrip({
-  //         name: this.trip.name,
-  //         description: this.trip.description
-  //     })
-  //       .then((result) => {
-  //         this.router.navigate(['/trip/'${id});
-  //       })
-  //       .catch((err) => {
-  //         this.error = err.error.error;
-  //         this.processing = false;
-  //         this.feedbackEnabled = false;
-  //       });
-  //   }
-  // }
-
-  // when you submit you pas {name, description}
 }
