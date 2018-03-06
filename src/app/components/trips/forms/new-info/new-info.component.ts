@@ -35,7 +35,7 @@ export class NewInfoComponent implements OnInit {
       description: this.description,
       members: this.members
     }
-    console.log(this.tripObject)
+    this.trip.emit(this.tripObject);
   }
 
   setInput(user){
@@ -45,26 +45,4 @@ export class NewInfoComponent implements OnInit {
     div.appendChild(added);
     this.members.push(user._id);
   }
-
-  // submitForm(form) {
-  //   this.error = '';
-  //   this.feedbackEnabled = true;
-  //   if (form.valid) {
-  //     this.processing = true;
-  //     this.tripService.createTrip({
-  //         name: this.trip.name,
-  //         description: this.trip.description
-  //     })
-  //       .then((result) => {
-  //         this.router.navigate(['/trip/'${id});
-  //       })
-  //       .catch((err) => {
-  //         this.error = err.error.error;
-  //         this.processing = false;
-  //         this.feedbackEnabled = false;
-  //       });
-  //   }
-  // }
-
-  // when you submit you pas {name, description}
 }

@@ -24,7 +24,7 @@
   <div id="addedmembers"></div>
 
   <div class="field submit">
-    <button type="submit">Create one</button>
+    <button (click)="createEvent()" type="submit">Create one</button>
     <div *ngIf="feedbackEnabled && form.invalid">
       <p class="validation">there are errors in the form, please review the fields</p>
     </div>

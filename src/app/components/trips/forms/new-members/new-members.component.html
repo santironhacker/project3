@@ -6,27 +6,27 @@
   <input type="text" value=" {{ user.username }} ">
 </div> -->
 
-<hr>
-<div>Hallo</div>
-
+<!-- <hr> -->
+<!-- <div>Hallo</div> -->
+<!-- <div>
 <mat-form-field>
     <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
   </mat-form-field>
-  
-  <mat-autocomplete #auto="matAutocomplete">
-    <mat-option *ngFor="let option of options" [value]="option">
-      {{ option }}
-    </mat-option>
-  </mat-autocomplete>
-<hr>
+</div> -->
+<!-- <hr>
 
-<hr>
+<hr> -->
 
-<h2>Hero Detail</h2>
+<!-- <h2>Hero Detail</h2>
 <h3><i>Just a FormControl</i></h3>
 <label class="center-block">
   Name:<input class="form-control" [formControl]="myControl">
-</label>
+</label> -->
 
 <!-- <div [formGroup]="parts">
   <input class="area" formControlName="area" size="3">
@@ -58,4 +58,4 @@
 <!-- <mat-form-field>
   <input type="text" matInput [formControl]="myControl">
 </mat-form-field> -->
-<hr>
+<!-- <hr> -->
