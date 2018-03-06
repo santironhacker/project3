@@ -35,6 +35,7 @@ import { AboutTripsComponent } from './components/users/about-trips/about-trips.
 import { CardTripsComponent } from './components/users/card-trips/card-trips.component';
 import { LandingInfoComponent } from './components/landing-info/landing-info.component';
 import { AddPlaceComponent } from './components/trips/forms/add-place/add-place.component';
+import { AboutPlacesMapComponent } from './components/trips/about-places-map/about-places-map.component';
 
 
 // -- routes
@@ -66,7 +67,8 @@ const routes: Routes = [
     AboutTripsComponent,
     CardTripsComponent,
     LandingInfoComponent,
-    AddPlaceComponent
+    AddPlaceComponent,
+    AboutPlacesMapComponent
   ],
   imports: [
     AgmCoreModule.forRoot({
@@ -78,7 +80,6 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
-
   ],
   providers: [AuthService, InitAuthGuardService, RequireAnonGuardService, RequireUserGuardService, TripService, UserService],
   bootstrap: [AppComponent]

@@ -11,6 +11,9 @@
   <div class="stylehelp">
     <app-add-place (newPlace)="handleAdd($event)" ></app-add-place>
   </div>
+  <div class="stylehelp">
+    <app-about-places-map [places]="trip.places" ></app-about-places-map>
+  </div>
 </ng-container>
 
 

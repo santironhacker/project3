@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TripService } from '../../services/trip.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-trip-main-page',
@@ -15,7 +15,8 @@ export class TripMainPageComponent implements OnInit {
 
   constructor(
     private tripService: TripService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     
@@ -41,9 +42,14 @@ export class TripMainPageComponent implements OnInit {
         .subscribe((params) => {
           this.tripId = params['id'];
           this.tripService.addPlace(this.tripId, place)
-          .then(res => this.trip = res);
-          // @todo reload the page???
+          .then((res) => {
+            console.log(res);
+            this.trip = res;
+            // this.router.navigate([`/trips/${this.tripId}`]);
+            window.location.reload(true);
+          });
         })
+          // @todo reload the page???
       }
       // @ go back button
 }

@@ -1,0 +1,21 @@
+<p>
+  about-places-map works!
+</p>
+
+
+<button onclick="document.getElementById('showMap').style.display='block'" style="width:auto;" class="button">Login</button>
+
+<div id="showMap" class="modal">‚
+  <div class="container" class="modal-content animate">
+    <span onclick="document.getElementById('showMap').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <h3>Places of your trip</h3>
+    <div id="mapid">
+    <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
+      <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+    </agm-map>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('showMap').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </div>
+</div>

@@ -40,7 +40,7 @@ export class AddPlaceComponent implements OnInit {
     this.searchControl = new FormControl();
 
     //set current position
-    this.setCurrentPosition();
+    // this.setCurrentPosition();
 
     //load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
@@ -56,16 +56,11 @@ export class AddPlaceComponent implements OnInit {
           if (place.geometry === undefined || place.geometry === null) {
             return;
           }
-          console.log(place.name);
-          console.log(place.geometry.location.lat());
-          console.log(place.geometry.location.lng());
           this.lat = place.geometry.location.lat();
-          this.name = place.name;
           this.lng = place.geometry.location.lng();
+          this.name = place.name;
 
-          console.log(this.lat);
-
-          //set latitude, longitude and zoom
+          //set latitude, longitude and zoom for google maps
           this.latitude = place.geometry.location.lat();
           this.longitude = place.geometry.location.lng();
           this.zoom = 12;
@@ -75,15 +70,15 @@ export class AddPlaceComponent implements OnInit {
   }
   
 
-  private setCurrentPosition() {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-        this.zoom = 12;
-      });
-    }
-  }
+  // private setCurrentPosition() {
+  //   if ("geolocation" in navigator) {
+  //     navigator.geolocation.getCurrentPosition((position) => {
+  //       this.latitude = position.coords.latitude;
+  //       this.longitude = position.coords.longitude;
+  //       this.zoom = 12;
+  //     });
+  //   }
+  // }
 
   addPlace(){
     let place = {

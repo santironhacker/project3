@@ -36,8 +36,6 @@ export class NewInfoComponent implements OnInit {
       members: this.members
     }
     console.log(this.tripObject)
-    this.trip.emit(this.tripObject);
-    
   }
 
   setInput(user){
@@ -47,6 +45,7 @@ export class NewInfoComponent implements OnInit {
     div.appendChild(added);
     this.members.push(user._id);
   }
+
   // submitForm(form) {
   //   this.error = '';
   //   this.feedbackEnabled = true;
