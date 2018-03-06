@@ -1,5 +1,9 @@
 
-  <div class="container">
+<button onclick="document.getElementById('addplace-popup').style.display='block'" style="width:auto;" class="button">Login</button>
+
+<div id="addplace-popup" class="modal">
+  <div class="container" class="modal-content animate">
+      <span onclick="document.getElementById('addplace-popup').style.display='none'" class="close" title="Close Modal">&times;</span>
     <h1>Enter a new Place for your trip</h1>
     <div class="form-group">
       <input placeholder="Add a new place" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
@@ -8,16 +12,18 @@
     <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
       <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
     </agm-map>
-  </div>
-  </div>
-  
-  <div id="commentfield">
-    <input class="comment" placeholder="Add a description" type="text" name="description" [(ngModel)]="description">
-  </div>
-
-  <div class="field submit">
-    <button (click)='addPlace()'>Add place to the trip </button>
-    <div *ngIf="feedbackEnabled">
-      <p class="validation">there are errors in the form, please review the fields</p>
+    </div>
+    <div id="commentfield">
+      <input class="comment" placeholder="Add a description" type="text" name="description" [(ngModel)]="description">
+    </div>
+    <div class="field submit">
+      <button (click)='addPlace()'>Add place to the trip </button>
+      <div *ngIf="feedbackEnabled">
+        <p class="validation">there are errors in the form, please review the fields</p>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('login-popup').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </div>
     </div>
   </div>
+</div>
