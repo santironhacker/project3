@@ -15,14 +15,14 @@ import { map } from 'rxjs/operators/map';
 })
 export class NewMembersComponent implements OnInit {
 
-  myControl = new FormControl();
+  myControl : FormControl = new FormControl();
   options = [
     'One',
     'Two',
     'Three'
    ];
 
-  filteredOptions: Observable<string[]>;
+  filteredUsers: Observable<string[]>;
 
 
   @Input() users: any;
@@ -31,16 +31,16 @@ export class NewMembersComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges
-    .pipe(
-      startWith(''),
-      map(val => this.filter(val))
-    );
+    console.log(this.users);
+    // this.filteredUsers = this.myControl.valueChanges
+    // .pipe(
+    //   startWith(''),
+    //   map(val => this.filter(val))
+    // );
   }
 
-  filter(val: string): string[] {
-    return this.options.filter(option =>
-      option.toLowerCase().indexOf(val.toLowerCase()) === 0);
+  // filter(val: string): string[] {
+  //   return this.users.filter(option => option.toLowerCase().indexOf(val.toLowerCase()) === 0);
   }
 
 }
