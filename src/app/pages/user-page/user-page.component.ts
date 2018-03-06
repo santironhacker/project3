@@ -10,6 +10,7 @@ import { TripService } from '../../services/trip.service';
 export class UserPageComponent implements OnInit {
 
   trips: Array<any>;
+  users: Array<any>;
 
   constructor(
     private authService: AuthService,

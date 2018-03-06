@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class UserService {
 
-  API_URL = "http://localhost:3000/users";
+  API_URL = environment.apiUrl + '/users';
 
   constructor(private httpClient: HttpClient) { }
 

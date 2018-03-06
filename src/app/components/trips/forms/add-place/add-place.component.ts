@@ -20,9 +20,9 @@ export class AddPlaceComponent implements OnInit {
   lng: number;
   name: String;
   description: String;
-  place: any;
+  feedbackEnabled: boolean = false;
   
-  @Output() newPlace = new EventEmitter(this.place);
+  @Output() newPlace = new EventEmitter<any>();
 
   @ViewChild("search")
   public searchElementRef: ElementRef;
@@ -57,8 +57,9 @@ export class AddPlaceComponent implements OnInit {
           if (place.geometry === undefined || place.geometry === null) {
             return;
           }
-          console.log(place.photos[0], place.name);
+          console.log(place.name);
           console.log(place.geometry.location.lat());
+          console.log(place.geometry.location.lng());
           this.lat = place.geometry.location.lat();
           this.name = place.name;
           this.lng = place.geometry.location.lng();
@@ -85,7 +86,7 @@ export class AddPlaceComponent implements OnInit {
     }
   }
 
-  addPlace(event){
+  addPlace(){
       // const placeSchema = new Schema({
   //   name: String,
   //   description: String,
@@ -103,7 +104,7 @@ export class AddPlaceComponent implements OnInit {
       coordinates: [this.lat, this.lng]
     }
     console.log(place);
-    this.newPlace.emit('this.place');
+    this.newPlace.emit(place);
   }
 
   // onClick() {

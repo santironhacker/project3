@@ -21,7 +21,7 @@ export class NewInfoComponent implements OnInit {
   members: Array<any> = [];
 
   @Input() users: any;
-  @Output() trip = new EventEmitter<any>(this.tripObject);
+  @Output() trip = new EventEmitter<any>();
   
   constructor(private tripService: TripService, private router: Router) {
   }

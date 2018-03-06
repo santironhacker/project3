@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardTripsComponent implements OnInit {
 
-  @Input() trip: Object;
+  @Input() trip: any;
   constructor() { }
 
   ngOnInit() {
