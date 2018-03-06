@@ -78,7 +78,6 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
-
   ],
   providers: [AuthService, InitAuthGuardService, RequireAnonGuardService, RequireUserGuardService, TripService, UserService],
   bootstrap: [AppComponent]
