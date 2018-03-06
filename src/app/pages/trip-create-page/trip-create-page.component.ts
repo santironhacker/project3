@@ -11,7 +11,6 @@ import { UserService } from '../../services/user.service';
 export class TripCreatePageComponent implements OnInit {
   users: Array<any>;
 
-  
   constructor(
     private tripService: TripService,
     private userService: UserService,
@@ -26,12 +25,10 @@ export class TripCreatePageComponent implements OnInit {
   }
 
   handleCreate(trip){
-    console.log(trip);
     this.tripService.createTrip(trip)
     .then((result) => {
         this.router.navigate(['/users']);
-        console.log(trip);
-        console.log(result)
+        console.log(result);
     })
   }
 }
