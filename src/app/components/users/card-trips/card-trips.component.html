@@ -1,12 +1,12 @@
 
 
-<div class="styleh">
-  <div class="cards-flex">
-      <img class="placeholder-pic" src="https://www.triumphhotels.com/assets/images/cms/cache/400x400/7e/358-7ec90c0650b0e9bbf606aa367d75fb22.jpg">
-      <div class="card2"> 
-        <div class="card-headline" > Name: {{ trip.name }} </div>
-        <div class="card-describtion"> Description: {{ trip.description }} </div>
-        <a class="card-router" [routerLink]="['/trips', trip._id]"> Details</a>
+<div class="container-tripcard">
+  <div class="tripcard-box">
+      <img src="https://www.triumphhotels.com/assets/images/cms/cache/400x400/7e/358-7ec90c0650b0e9bbf606aa367d75fb22.jpg">
+      <div> 
+        <div> Name: {{ trip.name }} </div>
+        <div> Description: {{ trip.description }} </div>
+        <a [routerLink]="['/trips', trip._id]"> Details</a>
       </div>
   </div>
 </div>

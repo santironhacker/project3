@@ -1,17 +1,17 @@
 <ng-container *ngIf="trip">
-  <div class="stylehelp"> 
+  <div> 
     <app-about-info [trip]="trip"></app-about-info>
   </div>
-  <div class="stylehelp">
+  <div>
     <app-about-members [members]="trip.members"></app-about-members>
   </div>
-  <div class="stylehelp">
+  <div>
     <app-about-places [places]="trip.places"></app-about-places>
   </div>
-  <div class="stylehelp">
+  <div>
     <app-add-place (newPlace)="handleAdd($event)" ></app-add-place>
   </div>
-  <div class="stylehelp">
+  <div>
     <app-about-places-map [places]="trip.places" ></app-about-places-map>
   </div>
 </ng-container>
