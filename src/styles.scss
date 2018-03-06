@@ -8,21 +8,13 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-// body {
-//   margin: 0;
-//   height: 0;
-//   // background-image: url("assets/images/ivana-cajina-424716-unsplash.jpg");
-//   // background-repeat: no-repeat;
-//   // background-size: 100%;
-//   display: flex;
-// }
   
 // //   /* ---- typography ---- */
   
 /* ---- layout ---- */
 
 // // main header, footer and site main
+
 #site-header {
   display: grid;
   grid-template-columns: 100%;
@@ -42,15 +34,6 @@ html {
   left: 0;
   text-align: center;
 }
-
-// .header-box {
-//   justify-self: end;
-// }
-
-// #site-main {
-//   // padding: 20px;
-// }
-  
   
 // app-root {
 //   width: 100%;
@@ -58,90 +41,62 @@ html {
   
 // // /* ---- components ---- */
 
-// // .flex {
-// //    display: flex;
-// // }
+// /* -- forms general -- */
 
-// .flexbox {
-//   display: flex;
-//   justify-content: space-between;
-// }
+form.is-processing {
+  	opacity: 0.5;
+}
 
+form .field {
+  margin-bottom: 20px;
+}
 
-// /* -- forms generell -- */
+form label {
+	display: block;
+	margin-bottom: 10px;
+	font-style: bold;
+}
 
-// form.is-processing {
-//  	opacity: 0.5;
-// }
+form input {
+  padding: 5px;
+  font-size: 16px;
+}
 
-// form .field {
-//   margin-bottom: 20px;
-// }
+form .submit {
+  padding-top: 20px;
+}
 
-// // form label {
-// // 	display: block;
-// // 	margin-bottom: 10px;
-// // 	font-style: bold;
-// // }
+form .submit button {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 16px;
+  background-color: cyan;
+  cursor: pointer;
+}
 
-// // form input {
-// //   padding: 5px;
-// //   font-size: 16px;
-// // }
+form .field.has-error label {
+	color: red;
+}
 
-// // form .submit {
-// //   padding-top: 20px;
-// // }
+form .validation {
+	margin: 5px 0 10px;
+	color: red;
+}
 
-// // form .submit button {
-// //   padding: 5px 20px;
-// //   text-align: center;
-// //   font-size: 16px;
-// //   background-color: cyan;
-// //   cursor: pointer;
-// // }
+form .field.has-error input {
+	border: 1px solid  red;
+}
 
-// // form .field.has-error label {
-// // 	color: red;
-// // }
+// google maps for search places autocomplete
 
-// // form .validation {
-// // 	margin: 5px 0 10px;
-// // 	color: red;
-// // }
+agm-map {
+  height: 200px;
+  width: 200px;
+ }
 
-// // form .field.has-error input {
-// // 	border: 1px solid  red;
-// // }
+// btn btn dark for sign up login is bootstrap
 
-// agm-map {
-//   height: 200px;
-//   width: 200px;
-//  }
-
-
-
-// .stylehelp {
-//    border: 2px solid black;
-// }
-
-// // .button {
-// //   position: absolute;
-// //   top: 50%;
-// //   left: 50%;
-// //   transform: translate(-50%, -50%);
-// //   -ms-transform: translate(-50%, -50%);
-// //   background-color: #f1f1f1;
-// //   color: black;
-// //   font-size: 14px;
-// //   padding: 15px 15px;
-// //   border: none;
-// //   cursor: pointer;
-// //   border-radius: 5px;
-// //   text-align: center;
-// // }
-
-// // .button:hover {
-// //   background-color: black;
-// //   color: white;
-// // }
+.button:hover {
+  background-color: black;
+  color: white;
+}
