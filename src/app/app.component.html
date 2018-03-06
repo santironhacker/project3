@@ -1,7 +1,7 @@
-<header id="site-header" class="flexbox">
-  <div *ngIf="!user" class="flexbox"> 
-    <app-login class="flexbox"></app-login>
-    <app-sign-up class="flexbox"></app-sign-up>
+<header id="site-header">
+  <div *ngIf="!user" class="header-box"> 
+    <app-login class="header-login"></app-login>
+    <app-sign-up class="header-signup"></app-sign-up>
   </div>
   <div *ngIf="user" class="flexbox"> 
     <button (click)="logout()" class="button"> Logout </button>
