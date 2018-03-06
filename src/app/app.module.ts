@@ -4,8 +4,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { AgmCoreModule } from '@agm/core';
+
+// Add-ons for AUTOCOMPLETE
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
+// Autocomplete Modules
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 // -- services
 import { AuthService } from './services/auth.service';
@@ -76,8 +84,13 @@ const routes: Routes = [
     HttpClientModule,
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(routes),
+    // Add-ons for Autocomplete
+    MatFormFieldModule,
+    MatInputModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    BrowserAnimationsModule,
+    MatAutocompleteModule
   ],
   providers: [AuthService, InitAuthGuardService, RequireAnonGuardService, RequireUserGuardService, TripService, UserService],
   bootstrap: [AppComponent]
