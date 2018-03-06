@@ -28,10 +28,10 @@
 </form> -->
 <button onclick="document.getElementById('signuppopup').style.display='block'" style="width:auto;" class="button btn btn-dark">Signup</button>
 
-<div id="signuppopup" class="modal">
-  <form class="modal-content animate" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+<div id="signuppopup" class="popup">
+  <form class="popup-content animate" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('signuppopup').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <span onclick="document.getElementById('signuppopup').style.display='none'" class="x-button" title="close">&times;</span>
     </div>
 
     <div class="container">
@@ -45,7 +45,7 @@
         </div>
   
       <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
-          <label for="psw">Password</label>
+          <label for="password">Password</label>
           <input type="password" name="password" [(ngModel)]="password" #passwordField="ngModel" required minlength="6" [disabled]="processing" placeholder="Enter Password"/>
           <div *ngIf="feedbackEnabled && passwordField.errors">
             <p *ngIf="passwordField.errors.required" class="validation">password required</p>
@@ -53,11 +53,8 @@
           </div>
         </div>
 
-      <div class="submit-btn">
-      <button type="submit" [disabled]=processing>Sign Up</button>
-      <div *ngIf="feedbackEnabled && form.invalid">
-        <p class="validation">there are errors in the form, please review the fields</p>
-      </div>
+      <div>
+      <button type="submit" class="button-popup" [disabled]=processing>Sign Up</button>
       </div>
     </div>
 
@@ -66,3 +63,13 @@
     </div>
   </form>
 </div>
+
+<!-- <script>
+  var modal = document.getElementById('signuppopup');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+@ todo in typescript 
+-->

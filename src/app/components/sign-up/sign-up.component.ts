@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
 import { InitAuthGuardService } from '../../services/guards/init-auth-guard.service';
 import { RequireAnonGuardService } from '../../services/guards/require-anon-guard.service';
 import { RequireUserGuardService } from '../../services/guards/require-user-guard.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',

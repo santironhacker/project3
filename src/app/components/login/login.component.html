@@ -30,10 +30,10 @@
 
 <button onclick="document.getElementById('login-popup').style.display='block'" style="width:auto;" class="button btn btn-dark">Login</button>
 
-<div id="login-popup" class="modal">
-  <form class="modal-content animate" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+<div id="login-popup" class="popup">
+  <form class="popup-content animate" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('login-popup').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <span onclick="document.getElementById('login-popup').style.display='none'" class="x-button" title="close">&times;</span>
     </div>
 
     <div class="container">
@@ -56,9 +56,7 @@
         </div>
 
       <div class="submit-btn">
-      <button type="submit" [disabled]=processing>Login</button>
-      <div *ngIf="feedbackEnabled"></div>
-        <!-- <p class="validation">there are errors in the form, please review the fields</p> -->
+      <button type="submit" class="button-popup" [disabled]=processing>Login</button>
       </div>
     </div>
 
