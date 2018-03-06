@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TripService } from '../../../../services/trip.service';
 import { Router } from '@angular/router';
+// import { create } from 'domain';
 // import { EventEmitter } from 'events';
 
 @Component({
@@ -21,9 +22,11 @@ export class NewInfoComponent implements OnInit {
   members: Array<any> = [];
 
   @Input() users: any;
-  @Output() trip = new EventEmitter<any>();
+  @Output() create = new EventEmitter<any>();
   
-  constructor(private tripService: TripService, private router: Router) {
+  constructor(
+    private tripService: TripService,
+    private router: Router) {
   }
   
   ngOnInit() {
@@ -35,7 +38,7 @@ export class NewInfoComponent implements OnInit {
       description: this.description,
       members: this.members
     }
-    this.trip.emit(this.tripObject);
+    this.create.emit(this.tripObject);
   }
 
   setInput(user){
