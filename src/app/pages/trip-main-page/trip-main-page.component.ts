@@ -45,8 +45,9 @@ export class TripMainPageComponent implements OnInit {
           .then((res) => {
             console.log(res);
             this.trip = res;
+            this.router.initialNavigation();
             // this.router.navigate([`/trips/${this.tripId}`]);
-            window.location.reload(true);
+            // window.location.reload(true);
           });
         })
           // @todo reload the page???
