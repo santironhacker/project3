@@ -1,10 +1,20 @@
 <header id="site-header">
   <div *ngIf="!user" class="header-box"> 
-    <app-login class="header-login"></app-login>
-    <app-sign-up class="header-signup"></app-sign-up>
+    <div class="logopic"> 
+      <img src="/assets/images/logo.jpg.png">
+    </div>
+    <div class="nouser-content">
+      <app-login class="header-login"></app-login>
+      <app-sign-up class="header-signup"></app-sign-up>
+    </div>
   </div>
-  <div *ngIf="user" class="flexbox"> 
-    <button (click)="logout()" class="button-header"> Logout </button>
+  <div *ngIf="user" class="header-box"> 
+      <div class="logopic"> 
+          <img src="/assets/images/logo.jpg.png">
+        </div>
+      <div class="nouser-content">
+        <button (click)="logout()" class="button-header"> Logout </button>
+      </div>
   </div>
 </header>
 
@@ -16,10 +26,11 @@
       </div>
       <div *ngIf="!loading && !!user"></div>
     </div>
-    <router-outlet></router-outlet>
   </div>
 </div>
-
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
   
 <footer id="site-footer">
   <div *ngIf="!user"> Test </div>

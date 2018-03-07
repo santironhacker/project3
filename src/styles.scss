@@ -13,6 +13,10 @@ html {
   
 /* ---- layout ---- */
 
+.logopic img {
+  width: 90px;
+  height: 45px;
+}
 body {
   margin-bottom: 50px;
 }
@@ -25,11 +29,17 @@ body {
   width: 100%;
   position: -webkit-sticky;
   position: sticky; top: 0px;
-  background: lightskyblue;
+  background: #020040;
+}
+
+.header-box {
+  display: grid;
+  grid-template-columns: 30% 70%;
 }
 
 #site-main {
   padding-bottom: $site-footer-height + 20px;
+  
 }
 
 #site-footer {
