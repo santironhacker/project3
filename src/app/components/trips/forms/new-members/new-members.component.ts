@@ -23,7 +23,7 @@ export class NewMembersComponent implements OnInit {
    ];
 
   filteredUsers: Observable<string[]>;
-
+  members: Array<any> = [];
 
   @Input() users: any;
   @Input() errorStateMatcher: any;
@@ -49,4 +49,15 @@ export class NewMembersComponent implements OnInit {
     return this.users.filter(user => user.username.toLowerCase().indexOf(val.toLowerCase()) === 0);
   }
 
+  setInput(){
+    let member = <HTMLInputElement>document.getElementById('add-member');
+    console.log(member.value);
+    let addedMember = document.createElement("div");
+    let addedMembersList = document.getElementById('added-members') as HTMLElement;
+    addedMember.innerText = member.value;
+    addedMembersList.appendChild(addedMember);
+    // this.members.push(user._id);
+  }
+
+  
 }

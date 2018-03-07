@@ -7,15 +7,20 @@
 </div>
 
 <hr>
-<div>Hallo</div>
+<div>Members coming to the trip:</div>
+<div id="added-members"></div>
+
+<div>Search for new members:</div>
 
 <form class="example-form">
   <mat-form-field class="example-full-width">
-    <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <input type="text" id="add-member" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete">
       <mat-option *ngFor="let user of filteredUsers | async" [value]="user.username">
         {{ user.username }}
       </mat-option>
     </mat-autocomplete>
+    <button class="btn btn-dark" (click)="setInput(user)">Add Member to the trip</button>
   </mat-form-field>
+  
 </form>
