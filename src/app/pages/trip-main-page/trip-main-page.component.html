@@ -8,10 +8,8 @@
   <div>
     <app-about-places [places]="trip.places"></app-about-places>
   </div>
-  <div>
+  <div class="wrapdiv">
     <app-add-place (newPlace)="handleAdd($event)" ></app-add-place>
-  </div>
-  <div>
     <app-about-places-map [places]="trip.places" ></app-about-places-map>
   </div>
 </ng-container>

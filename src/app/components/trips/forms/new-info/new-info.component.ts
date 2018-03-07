@@ -41,7 +41,7 @@ export class NewInfoComponent implements OnInit {
 
   @Input() users: any;
   @Input() errorStateMatcher: any;
-  @Output() createTrip = new EventEmitter<any>();
+  @Output() newPlace = new EventEmitter<any>();
   
   constructor(
     private tripService: TripService,
@@ -51,8 +51,7 @@ export class NewInfoComponent implements OnInit {
   ngOnInit() {
     // Autocomplete-filter settings
     const doThis = () => {
-      console.log(this.users, 'ok')
-      
+      // console.log(this.users, 'ok')
       this.filteredUsers = this.myControl.valueChanges
       .pipe(
         startWith(''),
@@ -64,15 +63,22 @@ export class NewInfoComponent implements OnInit {
   }
 
   // Handle create trip button
-  handleSubmitForm(form){
+  createOne(form){
     this.tripObject = {
       name: this.name,
       description: this.description,
       members: this.members
     }
-    this.createTrip.emit(this.tripObject);
+    console.log(this.tripObject)
+    this.newPlace.emit(this.tripObject);
     console.log(this.tripObject);
   }
+
+
+
+
+
+
 
   // Autocomplete-filter pipe settings
   filter(val: string): string[] {
