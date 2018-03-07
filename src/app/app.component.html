@@ -16,9 +16,10 @@
       </div>
       <div *ngIf="!loading && !!user"></div>
     </div>
+    <router-outlet></router-outlet>
   </div>
 </div>
-<router-outlet></router-outlet>
+
   
 <footer id="site-footer">
   <div *ngIf="!user"> Test </div>

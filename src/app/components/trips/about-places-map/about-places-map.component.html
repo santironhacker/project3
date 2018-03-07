@@ -1,15 +1,15 @@
 <button onclick="document.getElementById('showMap').style.display='block'" style="width:auto;" class="button btn btn-dark"> Show places on map </button>
 
-<div id="showMap" class="modal">‚
-  <div class="container" class="modal-content animate">
-    <span onclick="document.getElementById('showMap').style.display='none'" class="close" title="Close Modal">&times;</span>
-    <h3>Places of your trip</h3>
-    <div id="mapid">
-    <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
-      <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
-    </agm-map>
+<div id="showMap" class="popup">‚
+  <div class="container popup-content animate container">
+    <span onclick="document.getElementById('showMap').style.display='none'" class="x-button" title="Close Modal">&times;</span>
+    <div class="popupel">Places of your trip</div>
+    <div id="mapid" class="popupel">
+      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
+        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+      </agm-map>
     </div>
-    <div class="container" style="background-color:#f1f1f1">
+    <div class="container" class="popupel">
       <button type="button" onclick="document.getElementById('showMap').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
   </div>

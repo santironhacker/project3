@@ -1,17 +1,4 @@
-input {
-  width: 95%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
 
-// buttons 
-
-button:hover {
-  opacity: 0.8;
-}
 
 .cancelbtn {
   width: auto;
@@ -24,36 +11,31 @@ button:hover {
   padding: 16px;
 }
 
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  // z-index: 1; /* Sit on top */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  // overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  overflow: auto;
   padding-top: 60px;
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+.popup-content {
+  background-color: white;
+  margin: 5% auto 15% auto;
+  border: 2px solid grey;
+  width: 80%;
+  height: 80%;
+  display: grid;
+  grid-template-rows: 10% 10% 40% 20% 10% 10%;
 }
 
-/* The Close Button (x) */
-.close {
+.x-button {
   position: absolute;
   right: 25px;
   top: 0;
@@ -62,16 +44,15 @@ span.psw {
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.x-button:hover,
+.x-button:focus {
   color: red;
   cursor: pointer;
 }
 
-/* Add Zoom Animation */
 .animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+  -webkit-animation: animatezoom 0.8s;
+  animation: animatezoom 0.8s
 }
 
 @-webkit-keyframes animatezoom {
@@ -84,13 +65,25 @@ span.psw {
   to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
+
+  .cancel {
      width: 100%;
+  }
+}
+
+.popupel {
+justify-self: center;
+margin: 2px;
+} 
+
+#mapid {
+justify-self: center;
+}
+
+@media screen and (min-width: 767px) {
+  .popup-content {
+    width: 50%;
+    height: 70%;
   }
 }

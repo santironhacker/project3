@@ -1,29 +1,28 @@
 
 <button onclick="document.getElementById('addplace-popup').style.display='block'" style="width:auto;" class="button btn btn-dark"> Add a place </button>
 
-<div id="addplace-popup" class="modal">
-  <div class="container" class="modal-content animate">
-      <span onclick="document.getElementById('addplace-popup').style.display='none'" class="close" title="Close Modal">&times;</span>
-    <h1>Enter a new Place for your trip</h1>
+<div id="addplace-popup" class="popup">
+  <div class="container" class="popup-content animate">
+      <span onclick="document.getElementById('addplace-popup').style.display='none'" class="x-button" title="Close Modal">&times;</span>
+    <div class="popupel">
+      <p>Enter a new Place for your trip</p>
+    </div>
     <div class="form-group">
       <input placeholder="Add a new place" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
     </div>
-    <div id="mapid">
-    <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
+    <div id="mapid" class="popupel">
+    <agm-map id="agm-map-2" [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
       <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
     </agm-map>
     </div>
     <div id="commentfield">
-      <input class="comment" placeholder="Add a description" type="text" name="description" [(ngModel)]="description">
+      <input class="comment form-control" placeholder="Add a description" type="text" name="description" [(ngModel)]="description">
     </div>
-    <div class="field submit">
-      <button (click)='addPlace()'>Add place to the trip </button>
-      <div *ngIf="feedbackEnabled">
-        <p class="validation">there are errors in the form, please review the fields</p>
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('login-popup').style.display='none'" class="cancelbtn">Cancel</button>
-        </div>
-      </div>
+    <div class="field submit popupel">
+      <button class="btn btn-dark" (click)='addPlace()'>Add place to the trip </button>
+    </div>
+    <div  class="popupel">
+      <button type="button" onclick="document.getElementById('login-popup').style.display='none'" class="cancelbtn btn btn-dark">Cancel</button>
     </div>
   </div>
 </div>

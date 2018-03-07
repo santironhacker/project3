@@ -6,9 +6,7 @@
       <div> 
         <div> Name: {{ trip.name }} </div>
         <div> Description: {{ trip.description }} </div>
-        <a [routerLink]="['/trips', trip._id]"> Details</a>
+        <a [routerLink]="['/trips', trip._id]" class="btn btn-primary detailbtn" > Details</a>
       </div>
   </div>
 </div>
-
-

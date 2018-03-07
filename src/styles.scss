@@ -28,7 +28,12 @@ body {
   background: lightskyblue;
 }
 
+#site-main {
+  padding-bottom: $site-footer-height + 20px;
+}
+
 #site-footer {
+  height: $site-footer-height;
   padding: 6px 0px;
   background: lightskyblue;
   position: fixed;
@@ -93,10 +98,14 @@ form .field.has-error input {
 // google maps for search places autocomplete
 
 agm-map {
-  height: 200px;
-  width: 200px;
+  height: 350px;
+  width: 350px;
  }
 
+#agm-map-2 {
+  height: 200px;
+  width: 200px;
+}
 // btn btn dark for sign up login is bootstrap
 
 button:hover {
