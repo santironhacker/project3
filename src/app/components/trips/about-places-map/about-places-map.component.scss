@@ -72,3 +72,18 @@
        width: 100%;
     }
 }
+
+.popupel {
+  justify-self: center;
+} 
+
+#mapid {
+  justify-self: center;
+}
+
+@media screen and (min-width: 767px) {
+    .popup-content {
+      width: 50%;
+      height: 70%;
+    }
+}
