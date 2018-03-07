@@ -24,6 +24,7 @@ export class TripCreatePageComponent implements OnInit {
   }
 
   handleCreate(trip){
+    console.log(trip);
     this.tripService.createTrip(trip)
     .then((result) => {
         this.router.navigate(['/users']);

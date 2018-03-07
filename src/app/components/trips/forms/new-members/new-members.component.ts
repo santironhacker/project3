@@ -23,7 +23,6 @@ export class NewMembersComponent implements OnInit {
    ];
 
   filteredUsers: Observable<string[]>;
-  members: Array<any> = [];
 
   @Input() users: any;
   @Input() errorStateMatcher: any;
