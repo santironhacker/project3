@@ -1,11 +1,12 @@
+<h3> Detail of this trip: </h3>
 
-<div class="flex-container">
-<div class="flexchild">
-  <img class="placeholder-pic" src="https://lh3.googleusercontent.com/oLzmTqqZMgQM2vo0Smso51AUo9G1tHoyqFfkEswWRxL1iDMgq87IyqEqtwVRWkThIks=w300" alt="placeholder">
-</div>
-<div *ngIf="trip">
-  <h1> Name: {{trip.name}} </h1>
-  <h2> Description: </h2>
-  <p> {{trip.description}}</p>
-</div>
+<div class="details-container">
+  <div class="details-pic">
+    <img src="https://lh3.googleusercontent.com/oLzmTqqZMgQM2vo0Smso51AUo9G1tHoyqFfkEswWRxL1iDMgq87IyqEqtwVRWkThIks=w300" alt="placeholder">
+  </div>
+  <div class="details-information">
+    <p> Name: {{trip.name}} </p>
+    <p> Description: </p>
+    <p> {{trip.description}}</p>
+  </div>
 </div>
