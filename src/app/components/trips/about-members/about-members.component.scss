@@ -5,13 +5,44 @@
 
 .member-list {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  padding: 40px;
-  border: 3px lightgrey;
+  grid-template-columns: 25% 25% 25%;
+  padding: 20px;
+  border: 3px solid lightgrey;
+  grid-auto-flow: column;
+  padding-top: 5px;
+  padding-left: 5px;
+  /* padding: 20px; */
+  /* grid-gap: 3em; */
+}
+
+.members-pic {
+  justify-self: center;
+  text-align: center;
 }
 
 .members-pic img {
-  width: 110px;
-  height: 110px;
+  // width: 110px;
+  // height: 110px;
+  // justify-self: center;
+  width: 50px;
+  height: 50px;
+  -ms-grid-column-align: center;
   justify-self: center;
+}
+
+.members-headline {
+  font-style: normal;
+  font-size: 15px;
+  font-family: serif;
+}
+
+.members-for {
+  justify-self: center
+}
+
+.membername-p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 12px;
+  text-align: center;
 }
