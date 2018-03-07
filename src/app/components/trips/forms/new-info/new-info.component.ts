@@ -1,8 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TripService } from '../../../../services/trip.service';
 import { Router } from '@angular/router';
-// import { create } from 'domain';
-// import { EventEmitter } from 'events';
 import { FormControl, ReactiveFormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -20,11 +18,12 @@ import { map } from 'rxjs/operators/map';
 })
 export class NewInfoComponent implements OnInit {
   feedbackEnabled = false;
+  feedbackEnabledMembers = false;
   error = null;
   processing = false;
   name: String;
   description: String;
-  // members: Array<any>;
+  
   tripObject: any;
   user: any;
   member: String;
@@ -92,8 +91,9 @@ export class NewInfoComponent implements OnInit {
         addedMember.innerText = member.value;
         addedMembersList.appendChild(addedMember);
         this.members.push(element._id);
+        this.feedbackEnabledMembers = false;
       } else {
-        this.feedbackEnabled = true;
+        this.feedbackEnabledMembers = true;
       }
     });
   }
