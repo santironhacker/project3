@@ -7,6 +7,7 @@
     <div id="mapid" class="popupel">
       <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
         <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+        <agm-marker *ngFor="let place of places" [latitude]="place.location.coordinates[0]" [longitude]="place.location.coordinates[1]"></agm-marker>
       </agm-map>
     </div>
     <div class="container" class="popupel">
