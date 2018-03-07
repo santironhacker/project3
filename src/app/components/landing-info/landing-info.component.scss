@@ -1,23 +1,23 @@
-// .info-container {
-//   display: flex;
-//   flex-direction: column;
-// }
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+}
 
-// .flexi-container {
-//   display: flex;
-//   flex-direction: row;
-//   border: 2px solid black;
-//   background: grey;
-// }
+.flexi-container {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  background: grey;
+}
 
-// .pic-info {
-//   width: 300px;
-//   height: 220px;
-//   border-radius: 50%;
-// }
+.pic-info {
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+}
 
 // .maincontainer-infobox {
-//   background-image: url('/assets/images/matheus-ferrero-228716-unsplash.jpg');
+// //   background-image: url('/assets/images/matheus-ferrero-228716-unsplash.jpg');
 //   background-size: 100%;
 //   background-repeat: no-repeat;
 //   color: white;
@@ -27,17 +27,17 @@
 //   margin: 25px;
 // }
 
-// .headline-box {
-//   font-family: 'Sacramento', cursive;
-//   width: 100%;
-//   height: 350px;
-//   padding: 15px;
-//   size: 36px;
-//   background-image: url("/assets/images/cynthia-magana-138943-unsplash.jpg");
-//   background-size: 100%;
-//   background-repeat: no-repeat;
-//   color: blue;
-//   text-align: center
-// }
+.headline-box {
+  font-family: 'Sacramento', cursive;
+  width: 100%;
+  height: 350px;
+  padding: 15px;
+  size: 36px;
+  background-image: url("/assets/images/group-walking-sunset.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: blue;
+  text-align: center
+}
 
-// // font-family: 'Shadows Into Light Two', cursive;
+// font-family: 'Shadows Into Light Two', cursive;
