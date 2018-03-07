@@ -21,31 +21,29 @@
     </div>
 
   </div>
-
-  <div class="field-submit">
-    <button type="submit" class="btn btn-dark">Create one</button>
-    <div *ngIf="feedbackEnabled && form.invalid">
-      <p class="validation">there are errors in the form, please review the fields</p>
-    </div>
-  </div>
   
 </form>
 
 <div class="headline-added">Choosed members: </div>
 <div id="added-members"></div>
 
-
+<div class="field-submit">
+    <button type="submit" class="btn btn-dark">Create one</button>
+    <div *ngIf="feedbackEnabled && form.invalid">
+      <p class="validation">there are errors in the form, please review the fields</p>
+    </div>
+</div>
 
 <div class="add-search">Add new members:</div>
 <div class="drüber-div">
   <div [ngClass]="{'has-error': feedbackEnabledMembers && descriptionField.errors}">
-      <input class="search-input" type="text" id="add-member" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-      <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let user of filteredUsers | async" [value]="user.username"> {{ user.username }} </mat-option>
-      </mat-autocomplete>
-      <div *ngIf="feedbackEnabledMembers && nameField.errors">
-        <p *ngIf="nameField.errors.required" class="validation">This user does not exist</p>
-      </div>
-      <button class="btn btn-dark" (click)="setInput()">Add</button>
+    <input class="search-input" type="text" id="add-member" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let user of filteredUsers | async" [value]="user.username"> {{ user.username }} </mat-option>
+    </mat-autocomplete>
+    <div *ngIf="feedbackEnabledMembers && nameField.errors">
+      <p *ngIf="nameField.errors.required" class="validation">This user does not exist</p>
+    </div>
+    <button class="btn btn-dark" (click)="setInput()">Add</button>
   </div>  
 </div>
