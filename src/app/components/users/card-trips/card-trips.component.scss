@@ -1,24 +1,23 @@
-.container-tripcard {
-  display: grid;
-  grid-template-columns: 100%;
-}
-
 .tripcard-box {
   display: grid;
   grid-template-columns: 40% 60%;
-  padding: 40px;
-  border: 3px lightgrey;
+  -ms-grid-columns: 40% 60%;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
 }
 
 .tripcard-box img {
-  width: 220px;
-  height: 220px;
+  width: 100px;
+  height: 100px;
   justify-self: center;
 }
 
-// @todo footer doesnt work here
-
-
 .detailbtn {
-  float: right;
+  justify-self: end;
+}
+
+.description-trip {
+  display: grid;
+  grid-template-rows: 25% 45% 30%;
 }
