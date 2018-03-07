@@ -1,3 +1,5 @@
+@import '../../../../../scss/variables.scss';
+
 .details-container {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -11,8 +13,9 @@
 }
 
 .details-pic img {
-  width: 110px;
-  height: 110px;
+  width: $image-placeholder-width + 5px;
+  height: $image-placeholder-height + 5px;
+  justify-self: center;
 }
 
 .details-pic {

@@ -28,7 +28,12 @@ body {
   background: lightskyblue;
 }
 
+#site-main {
+  padding-bottom: $site-footer-height + 20px;
+}
+
 #site-footer {
+  height: $site-footer-height;
   padding: 6px 0px;
   background: lightskyblue;
   position: fixed;
