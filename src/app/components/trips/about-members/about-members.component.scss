@@ -5,11 +5,11 @@
 
 .member-list {
   display: grid;
-  grid-template-columns: 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
   padding: 20px;
-  border: 3px solid lightgrey;
+  border-top: 3px solid lightgrey;
   grid-auto-flow: column;
-  padding-top: 5px;
+  // padding-top: 5px;
   padding-left: 5px;
   /* padding: 20px; */
   /* grid-gap: 3em; */
