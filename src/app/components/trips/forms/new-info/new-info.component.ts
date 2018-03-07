@@ -22,7 +22,7 @@ export class NewInfoComponent implements OnInit {
   members: Array<any> = [];
 
   @Input() users: any;
-  @Output() create = new EventEmitter<any>();
+  @Output() createTrip = new EventEmitter<any>();
   
   constructor(
     private tripService: TripService,
@@ -38,7 +38,7 @@ export class NewInfoComponent implements OnInit {
       description: this.description,
       members: this.members
     }
-    this.create.emit(this.tripObject);
+    this.createTrip.emit(this.tripObject);
   }
 
   setInput(user){
