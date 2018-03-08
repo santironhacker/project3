@@ -1,53 +1,49 @@
 
 
-<form (ngSubmit)="handleSubmitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+<form (ngSubmit)="handleSubmitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}" class="desktop">
 
   <div class="details-container">
-    <h3>Tell us about your trip</h3>
-    <!-- <div class="details-pic">
-      <img src="https://lh3.googleusercontent.com/oLzmTqqZMgQM2vo0Smso51AUo9G1tHoyqFfkEswWRxL1iDMgq87IyqEqtwVRWkThIks=w300" alt="placeholder">
-    </div> -->
+    <h1 class="new-info-headline">Create a new trip: </h1>
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
-      <label>Name:</label>
-      <input type="text" name="name" [(ngModel)]="name" #nameField="ngModel" [disabled]="processing"/>
+      <label class="label-create">Name:</label>
+      <input class="form-new-info" type="text" name="name" [(ngModel)]="name" #nameField="ngModel" [disabled]="processing"/>
       <div *ngIf="feedbackEnabled && nameField.errors">
         <p *ngIf="nameField.errors.required" class="validation">name required</p>
       </div>
     </div>
   
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && descriptionField.errors}">
-      <label>Description: </label>
-      <input type="text" name="description" [(ngModel)]="description" #descriptionField="ngModel" required minlength="15" [disabled]="processing"/>
+      <label class="label-create" >Description: </label>
+      <input class="form-new-info" type="text" name="description" [(ngModel)]="description" #descriptionField="ngModel" required minlength="15" [disabled]="processing"/>
       <div *ngIf="feedbackEnabled && descriptionField.errors">
         <p *ngIf="descriptionField.errors.required" class="validation">Please enter a description</p>
       </div>
     </div>
 
   </div>
-
-  <div class="field submit">
-    <button  type="submit">Create one</button>
-    <div *ngIf="feedbackEnabled && form.invalid">
-      <p class="validation">there are errors in the form, please review the fields</p>
-    </div>
-  </div>
   
 </form>
 
-<div>Members coming to the trip:</div>
+<div class="headline-added">Choosed members: </div>
 <div id="added-members"></div>
 
-<div>Search for new members:</div>
-  <div [ngClass]="{'has-error': feedbackEnabledMembers && descriptionField.errors}">
-    <input type="text" id="add-member" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let user of filteredUsers | async" [value]="user.username">
-        {{ user.username }}
-      </mat-option>
-    </mat-autocomplete>
-    <button class="btn btn-dark" (click)="setInput()">Add Member to the trip</button>
-  </div>
+<div class="field-submit">
+    <button type="submit" class="btn btn-dark" (click)='createOne(form)'>Create one</button>
+    <div *ngIf="feedbackEnabled && form.invalid">
+      <p class="validation">there are errors in the form, please review the fields</p>
+    </div>
+</div>
 
-  <div *ngIf="feedbackEnabledMembers && nameField.errors">
-    <p *ngIf="nameField.errors.required" class="validation">This user does not exist</p>
-  </div>
+<div class="add-search">Add new members:</div>
+<div class="drüber-div">
+  <div [ngClass]="{'has-error': feedbackEnabledMembers && descriptionField.errors}">
+    <input class="search-input" type="text" id="add-member" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let user of filteredUsers | async" [value]="user.username"> {{ user.username }} </mat-option>
+    </mat-autocomplete>
+    <div *ngIf="feedbackEnabledMembers && nameField.errors">
+      <p *ngIf="nameField.errors.required" class="validation">This user does not exist</p>
+    </div>
+    <button class="btn btn-dark" (click)="setInput()">Add</button>
+  </div>  
+</div>

@@ -12,6 +12,8 @@ export class AboutPlacesMapComponent implements OnInit {
   public latitude: number;
   public longitude: number;
   public zoom: number;
+  center: any;
+  location: any;
 
   constructor(
     private mapsAPILoader: MapsAPILoader,
@@ -19,9 +21,9 @@ export class AboutPlacesMapComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // set center of map
     this.zoom = 4;
     this.latitude = 42.8282;
     this.longitude = 11.5795;
   }
-
 }

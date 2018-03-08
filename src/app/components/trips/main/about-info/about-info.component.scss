@@ -1,23 +1,41 @@
 @import '../../../../../scss/variables.scss';
 
-.details-container {
+// .details-container {
+//   display: grid;
+//   grid-template-columns: 40% 60%;
+//   padding: 25px
+// }
+
+// .details-list {
+//   display: grid;
+//   grid-template-columns: 40% 60%;
+//   border: 3px lightgrey;
+// }
+
+// .details-pic img {
+//   width: $image-placeholder-width + 5px;
+//   height: $image-placeholder-height + 5px;
+// }
+
+.details-card {
   display: grid;
   grid-template-columns: 40% 60%;
-  padding: 25px
+  -ms-grid-columns: 40% 60%;
+  margin: 10px;
 }
 
-.details-list {
+.details-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.details-trip {
   display: grid;
-  grid-template-columns: 40% 60%;
-  border: 3px lightgrey;
+  grid-template-rows: 25% 45% 30%;
 }
 
-.details-pic img {
-  width: $image-placeholder-width + 5px;
-  height: $image-placeholder-height + 5px;
-  justify-self: center;
-}
 
-.details-pic {
-  justify-self: center;
+.details-headline {
+  font-size: 17px;
+  padding-top: 5px;
 }

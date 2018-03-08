@@ -1,13 +1,13 @@
 
-<h3> Members of this trip: </h3>
+<h3 class="members-headline"> Members of this trip: </h3>
 
 <div class="members-container">
   <div *ngIf="members" class="member-list">
-    <div *ngFor="let member of members">
+    <div *ngFor="let member of members" class="members-for">
       <div class="members-pic">
         <img src="http://rgmillerinc.com/wp-content/uploads/2017/01/placeholderperson-circle.gif" alt="placeholder">
       </div>
-      <p>{{ member.username }}</p>
+      <p class="membername-p">{{ member.username }}</p>
     </div>
   </div>
 </div>

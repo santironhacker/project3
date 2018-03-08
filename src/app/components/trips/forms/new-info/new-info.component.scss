@@ -1,0 +1,76 @@
+.form-new-info {
+width: 330px;
+border: 2px solid black;
+height: 37px;
+}
+
+.field-submit {
+  text-align: end;
+  padding-right: 15px;
+}
+
+.label-create {
+  font-size: 15px;
+}
+
+.new-info-headline {
+  font-size: 17px;
+  padding-top: 10px;
+}
+
+.search-input {
+  width: 270px;
+  border: 2px solid black;
+  height: 37px;
+}
+
+.dropdown {
+  padding-left: 15px;
+}
+
+.cdk-overlay-container {
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .form-new-info {
+    width: 600px;
+  }
+
+  .search-input {
+    width: 600px;
+  }
+
+  .desktop {
+    padding: 50px;
+  }
+
+  .drüber-div {
+    padding-left: 50px;
+  }
+
+  .add-search {
+    font-size: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+  }
+
+  .headline-added {
+    padding-left: 50px;
+  }
+
+  // @ todo ask andre
+  .cdk-overlay-container {
+    padding-left: 100px;
+  }
+}
+
+// @ todo error handling sign up and login
+// @ todo cdk container dropdown menue
+// @ todo bg size at desktop version
+// @ todo grid tripcards on user page
+// @ todo go back button?
+// @ todo database feeding !!!!
+// @ todo maybe comments/messages?
+// @ todo maybe name of user?
+// @ todo maybe date

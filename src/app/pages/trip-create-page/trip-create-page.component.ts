@@ -24,10 +24,25 @@ export class TripCreatePageComponent implements OnInit {
   }
 
   handleCreate(trip){
-    console.log(trip);
     this.tripService.createTrip(trip)
     .then((result) => {
-        this.router.navigate(['/users']);
+      this.router.navigate(['/users']);
+      console.log(trip);
     })
   }
 }
+
+
+// handleAdd(place){
+//   console.log(place);
+//   this.route.params
+//       .subscribe((params) => {
+//         this.tripId = params['id'];
+//         this.tripService.addPlace(this.tripId, place)
+//         .then((res) => {
+//           console.log(res);
+//           this.trip = res;
+//           this.router.initialNavigation();
+//           window.location.reload(true);
+//         });
+//       })

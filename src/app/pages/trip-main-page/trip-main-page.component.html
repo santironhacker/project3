@@ -1,3 +1,4 @@
+<div class="container">
 <ng-container *ngIf="trip">
   <div> 
     <app-about-info [trip]="trip"></app-about-info>
@@ -8,12 +9,11 @@
   <div>
     <app-about-places [places]="trip.places"></app-about-places>
   </div>
-  <div>
+  <div class="wrapdiv">
     <app-add-place (newPlace)="handleAdd($event)" ></app-add-place>
-  </div>
-  <div>
     <app-about-places-map [places]="trip.places" ></app-about-places-map>
   </div>
 </ng-container>
+</div>
 
 

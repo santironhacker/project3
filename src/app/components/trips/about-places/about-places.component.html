@@ -1,13 +1,13 @@
-<h2> Places of your trip: </h2>
+<h2 class="places-headline"> Places of your trip: </h2>
 
 
 <div class="places-container">
   <div *ngIf="places" class="places-list">
-      <div *ngFor="let place of places"> 
+      <div *ngFor="let place of places" class="places-for"> 
           <div class="place-pic">
           <img src="https://lh3.googleusercontent.com/oLzmTqqZMgQM2vo0Smso51AUo9G1tHoyqFfkEswWRxL1iDMgq87IyqEqtwVRWkThIks=w300" alt="placeholder">
           </div>
-            <p> {{place.name}} </p>
+            <p class="place-name"> {{place.name}} </p>
       </div>
   </div>
   <div *ngIf="!places">
