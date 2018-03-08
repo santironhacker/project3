@@ -97,5 +97,7 @@ export class NewInfoComponent implements OnInit {
     });
   }
 
+  handleSubmitForm(form){}
+
 
 }
