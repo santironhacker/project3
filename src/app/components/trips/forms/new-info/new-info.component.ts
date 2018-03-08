@@ -60,7 +60,7 @@ export class NewInfoComponent implements OnInit {
       );
     
     }
-    var timeoutID = window.setTimeout( doThis, 50);
+    var timeoutID = window.setTimeout( doThis, 1000);
   }
 
   // Handle create trip button
