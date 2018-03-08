@@ -70,9 +70,7 @@ export class NewInfoComponent implements OnInit {
       description: this.description,
       members: this.members
     }
-    // console.log(this.tripObject)
     this.createdOne.emit(this.tripObject);
-    // console.log(this.tripObject);
   }
 
   // Autocomplete-filter pipe settings
