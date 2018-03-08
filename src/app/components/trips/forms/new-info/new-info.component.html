@@ -28,7 +28,7 @@
 <div id="added-members"></div>
 
 <div class="field-submit">
-    <button type="submit" class="btn btn-dark" (click)='createOne()'>Create one</button>
+    <button type="submit" class="btn btn-dark" (click)='createOne(form)'>Create one</button>
     <div *ngIf="feedbackEnabled && form.invalid">
       <p class="validation">there are errors in the form, please review the fields</p>
     </div>

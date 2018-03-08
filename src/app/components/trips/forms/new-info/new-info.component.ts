@@ -17,6 +17,8 @@ import { map } from 'rxjs/operators/map';
   styleUrls: ['./new-info.component.scss']
 })
 export class NewInfoComponent implements OnInit {
+  @Output() createdOne = new EventEmitter<any>();
+
   feedbackEnabled = false;
   feedbackEnabledMembers = false;
   error = null;
@@ -41,7 +43,6 @@ export class NewInfoComponent implements OnInit {
 
   @Input() users: any;
   @Input() errorStateMatcher: any;
-  @Output() newPlace = new EventEmitter<any>();
   
   constructor(
     private tripService: TripService,
@@ -69,16 +70,10 @@ export class NewInfoComponent implements OnInit {
       description: this.description,
       members: this.members
     }
-    console.log(this.tripObject)
-    this.newPlace.emit(this.tripObject);
-    console.log(this.tripObject);
+    // console.log(this.tripObject)
+    this.createdOne.emit(this.tripObject);
+    // console.log(this.tripObject);
   }
-
-
-
-
-
-
 
   // Autocomplete-filter pipe settings
   filter(val: string): string[] {
