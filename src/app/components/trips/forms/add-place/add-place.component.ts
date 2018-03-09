@@ -15,6 +15,7 @@ export class AddPlaceComponent implements OnInit {
   public longitude: number;
   public searchControl: FormControl;
   public zoom: number;
+  showAddPlace: boolean;
   lat: number;
   lng: number;
   name: String;
@@ -78,6 +79,14 @@ export class AddPlaceComponent implements OnInit {
         this.zoom = 12;
       });
     }
+  }
+
+  handleShowAddPlace(){
+    this.showAddPlace = true;
+  }
+
+  handleCloseAddPlace(){
+    this.showAddPlace = false;
   }
 
   addPlace(){

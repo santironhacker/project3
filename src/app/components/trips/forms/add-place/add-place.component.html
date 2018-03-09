@@ -1,9 +1,9 @@
 
-<button onclick="document.getElementById('addplace-popup').style.display='block'" style="width:auto;" class="button btn btn-dark"> Add a place </button>
+<button (click)="handleShowAddPlace()" style="width:auto;" class="button btn btn-dark"> Add a place </button>
 
-<div id="addplace-popup" class="popup">
+<div id="showAddPlace" class="popup" *ngIf="showAddPlace">
   <div class="container" class="popup-content animate">
-      <span onclick="document.getElementById('addplace-popup').style.display='none'" class="x-button" title="Close Modal">&times;</span>
+      <span (click)="handleCloseAddPlace()" class="x-button" title="Close Modal">&times;</span>
     <div class="popupel">
       <p>Enter a new Place for your trip</p>
     </div>
@@ -22,7 +22,7 @@
       <button class="btn btn-dark" (click)='addPlace()'>Add place to the trip </button>
     </div>
     <div  class="popupel">
-      <button type="button" onclick="document.getElementById('addplace-popup').style.display='none'" class="cancelbtn btn btn-dark">Cancel</button>
+      <button type="button" (click)="handleCloseAddPlace()" class="cancelbtn btn btn-dark">Cancel</button>
     </div>
   </div>
 </div>
