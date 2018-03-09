@@ -11,7 +11,10 @@
   </div>
   <div class="wrapdiv">
     <app-add-place (newPlace)="handleAdd($event)" ></app-add-place>
-    <app-about-places-map [places]="trip.places" ></app-about-places-map>
+    <app-about-places-map class="about-map" [places]="trip.places" ></app-about-places-map>
+  </div>
+  <div class="routerbtn">
+    <button class="btn btn-dark" routerLink="/users" routerLinkActive="active"> GoBack </button>
   </div>
 </ng-container>
 </div>
