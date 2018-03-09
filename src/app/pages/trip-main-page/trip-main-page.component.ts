@@ -23,27 +23,25 @@ export class TripMainPageComponent implements OnInit {
     this.route.params
     .subscribe((params) => {
       this.tripId = params['id'];
-      console.log(this.tripId);
       
       this.tripService.getOne(this.tripId)
        .then((trip) => {
        this.trip = trip;
-       console.log(this.trip)
        })
 
       this.tripService.getTripUser(this.tripId)
        .then(res => this.trip = res);
       })
+
+      
   }
     
   handleAdd(place){
-    console.log(place);
     this.route.params
         .subscribe((params) => {
           this.tripId = params['id'];
           this.tripService.addPlace(this.tripId, place)
           .then((res) => {
-            console.log(res);
             this.trip = res;
             this.router.initialNavigation();
             window.location.reload(true);

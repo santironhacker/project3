@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TripMainPageComponent } from './trip-main-page.component';
 
 describe('TripMainPageComponent', () => {
+  
   let component: TripMainPageComponent;
   let fixture: ComponentFixture<TripMainPageComponent>;
 

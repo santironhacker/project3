@@ -1,17 +1,17 @@
-<button onclick="document.getElementById('showMap').style.display='block'" style="width:auto;" class="button btn btn-dark places"> Show places on map </button>
+<button (click)="handleShowClick()" style="width:auto;" class="button btn btn-dark places"> Show places on map </button>
 
-<div id="showMap" class="popup">‚
+<div id="showMap" class="popup" *ngIf="showMap">‚
   <div class="container popup-content animate container">
-    <span onclick="document.getElementById('showMap').style.display='none'" class="x-button" title="Close Modal">&times;</span>
+    <span (click)="handleCloseClick()" class="x-button" title="Close Modal">&times;</span>
     <div class="popupel">Places of your trip</div>
-    <div id="mapid" class="popupel">
-      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
+    <div id="mapid" class="popupel" >
+      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom" #map>
         <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
         <agm-marker *ngFor="let place of places" [latitude]="place.location.coordinates[0]" [longitude]="place.location.coordinates[1]"></agm-marker>
       </agm-map>
     </div>
     <div class="container" class="popupel">
-      <button type="button" onclick="document.getElementById('showMap').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" (click)="handleCloseClick()" class="cancelbtn">Cancel</button>
     </div>
   </div>
 </div>
