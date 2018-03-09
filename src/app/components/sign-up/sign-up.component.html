@@ -1,37 +1,9 @@
-<!-- <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+<button (click)="handleShowSignUp()" style="width:auto;" class="button btn">Signup</button>
 
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
-    <label>Username</label>
-    <input type="text" name="username" [(ngModel)]="username" #usernameField="ngModel" required minlength="6" [disabled]="processing"/>
-    <div *ngIf="feedbackEnabled && usernameField.errors">
-      <p *ngIf="usernameField.errors.required" class="validation">username required</p>
-      <p *ngIf="usernameField.errors.minlength" class="validation">username is too short</p>
-    </div>
-  </div>
-
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
-    <label>Password</label>
-    <input type="text" name="password" [(ngModel)]="password" #passwordField="ngModel" required minlength="6" [disabled]="processing"/>
-    <div *ngIf="feedbackEnabled && passwordField.errors">
-      <p *ngIf="passwordField.errors.required" class="validation">password required</p>
-      <p *ngIf="passwordField.errors.minlength" class="validation">password is too short</p>
-    </div>
-  </div>
-
-
-  <div class="field submit">
-    <button type="submit" [disabled]="processing">Sign up</button>
-    <div *ngIf="feedbackEnabled && form.invalid">
-      <p class="validation">there are errors in the form, please review the fields</p>
-    </div>
-  </div>
-</form> -->
-<button onclick="document.getElementById('signuppopup').style.display='block'" style="width:auto;" class="button btn">Signup</button>
-
-<div id="signuppopup" class="popup">
+<div id="showSignUp" class="popup" *ngIf="showSignUp">
   <form class="popup-content animate" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('signuppopup').style.display='none'" class="x-button" title="close">&times;</span>
+      <span (click)="handleCloseSignUp()" class="x-button" title="close">&times;</span>
     </div>
 
     <div class="container">
@@ -59,17 +31,7 @@
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('signuppopup').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" (click)="handleCloseSignUp()" class="cancelbtn">Cancel</button>
     </div>
   </form>
 </div>
-
-<!-- <script>
-  var modal = document.getElementById('signuppopup');
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-@ todo in typescript 
--->

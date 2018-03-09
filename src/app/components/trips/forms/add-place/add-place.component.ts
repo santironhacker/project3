@@ -89,6 +89,7 @@ export class AddPlaceComponent implements OnInit {
     this.showAddPlace = false;
   }
 
+  
   addPlace(){
     let place = {
       name: this.name,

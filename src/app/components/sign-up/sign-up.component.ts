@@ -17,6 +17,7 @@ export class SignUpComponent implements OnInit {
   processing = false;
   username: String;
   password: String;
+  showSignUp: boolean;
 
   constructor(
     private authService: AuthService, 
@@ -43,5 +44,13 @@ export class SignUpComponent implements OnInit {
           this.feedbackEnabled = false;
         });
     }
+  }
+
+  handleShowSignUp(){
+    this.showSignUp = true;
+  }
+
+  handleCloseSignUp(){
+    this.showSignUp = false;
   }
 }
