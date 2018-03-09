@@ -93,5 +93,7 @@ export class NewInfoComponent implements OnChanges {
     });
   }
 
+  handleSubmitForm(form){}
+
 
 }

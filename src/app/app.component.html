@@ -13,7 +13,7 @@
           <img src="/assets/images/logo.jpg.png">
         </div>
       <div class="nouser-content">
-        <button (click)="logout()" class="button-header"> Logout </button>
+        <button (click)="logout()" class="button-header" class="btn"> Logout </button>
       </div>
   </div>
 </header>
@@ -33,6 +33,6 @@
 </div>
   
 <footer id="site-footer">
-  <div *ngIf="!user"> Test </div>
-  <div *ngIf="user"> FB, twitter, instagramm</div>
+  <div *ngIf="!user"> JOIN US </div>
+  <div *ngIf="user" style="font-size: 14px"> © Santiago, Stephanie</div>
 </footer>
