@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { TripService } from '../../../../services/trip.service';
 import { Router } from '@angular/router';
 import { FormControl, ReactiveFormsModule } from '@angular/forms'
@@ -16,7 +16,7 @@ import { map } from 'rxjs/operators/map';
   templateUrl: './new-info.component.html',
   styleUrls: ['./new-info.component.scss']
 })
-export class NewInfoComponent implements OnInit {
+export class NewInfoComponent implements OnChanges {
   @Output() createdOne = new EventEmitter<any>();
 
   feedbackEnabled = false;
@@ -49,18 +49,14 @@ export class NewInfoComponent implements OnInit {
     private router: Router) {
   }
   
-  ngOnInit() {
-    // Autocomplete-filter settings
-    const doThis = () => {
-      // console.log(this.users, 'ok')
-      this.filteredUsers = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        map(val => this.filter(val))
-      );
-    
+  ngOnChanges() {
+    if (!this.users) {
+      throw new Error('Cannot init TripCreatePageComponent without @input users. Add an ngIf to make sure users is defined');
     }
-    var timeoutID = window.setTimeout( doThis, 1000);
+    this.filteredUsers = this.myControl.valueChanges.pipe(
+      startWith(''),
+      map(val => this.filter(val))
+    );
   }
 
   // Handle create trip button
