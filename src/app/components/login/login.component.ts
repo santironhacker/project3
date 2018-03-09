@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   error = null;
   processing = false;
   // post: any;
+  showLogin: boolean;
 
   constructor(
     private authService: AuthService, 
@@ -42,5 +43,13 @@ export class LoginComponent implements OnInit {
           this.feedbackEnabled = false;
         });
     }
+  }
+
+  handleCloseClick(){
+    this.showLogin = false;
+  }
+
+  handleShowClick() {
+    this.showLogin = true;
   }
 }

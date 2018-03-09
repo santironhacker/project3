@@ -1,9 +1,9 @@
-<button onclick="document.getElementById('login-popup').style.display='block'" style="width:auto;" class="button btn">Login</button>
+<button (click)="handleShowClick()" style="width:auto;" class="button btn">Login</button>
 
-<div id="login-popup" class="popup">
+<div id="showLogin" class="popup" *ngIf="showLogin">
   <form class="popup-content animate" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('login-popup').style.display='none'" class="x-button" title="close">&times;</span>
+      <span (click)="handleCloseClick()" class="x-button" title="close">&times;</span>
     </div>
 
     <div class="container">
@@ -31,7 +31,7 @@
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('login-popup').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" (click)="handleCloseClick()" class="cancelbtn">Cancel</button>
     </div>
   </form>
 </div>
