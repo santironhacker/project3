@@ -1,50 +1,17 @@
-// Layouts
-.vertical-container {
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-}
-
-.flexi-container {
-  display: flex;
-  flex-direction: row;
-}
-
-
 // Main blocks
 .headline-box {
-  // width: 100%;
   height: 95vh;
-  padding-top: 20px;
   font-size: 30px;
-  background-image: url("/assets/images/ivana-cajina-424716-unsplash.jpg");
+  background-image: url("/assets/images/luca-micheli-422053-unsplash.jpg");
   background-size: cover;
   background-position: top;
-  // background-repeat: no-repeat;
+  background-repeat: no-repeat;
   color: white;
   text-align: center;
-  font-size: 24px;
   padding-top: 60px;
 }
 
-.container {
-  padding: 0px;
-}
-// font-family: 'Shadows Into Light Two', cursive;
-
-.maincontainer-infopic img {
-height: 75px;
-width: 75px;
-}
-
-.maincontainer-infobox {
-width: auto;
-height: 45px;
-}
-
-@media screen and (min-width: 768px) {
-  .headline-box {
-    background-size: cover;
-    height: 100vh;
-  }
+.landing-info-text {
+  background-color: rgba(2, 0, 64, 0.6);
+  padding: 15px;
 }
