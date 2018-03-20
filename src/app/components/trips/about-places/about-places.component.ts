@@ -12,8 +12,6 @@ export class AboutPlacesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.places);
-    console.log(this.places.length)
   }
 
 }

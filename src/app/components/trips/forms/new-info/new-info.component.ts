@@ -77,7 +77,6 @@ export class NewInfoComponent implements OnChanges {
   // DOM Manipulation: Add member to the trip 
   setInput(){
     let member = <HTMLInputElement>document.getElementById('add-member');
-    console.log(member.value);
 
     this.users.forEach(element => {
       if (element.username === member.value ) {

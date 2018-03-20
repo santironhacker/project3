@@ -27,22 +27,6 @@ export class TripCreatePageComponent implements OnInit {
     this.tripService.createTrip(trip)
     .then((result) => {
       this.router.navigate(['/users']);
-      console.log(trip);
     })
   }
 }
-
-
-// handleAdd(place){
-//   console.log(place);
-//   this.route.params
-//       .subscribe((params) => {
-//         this.tripId = params['id'];
-//         this.tripService.addPlace(this.tripId, place)
-//         .then((res) => {
-//           console.log(res);
-//           this.trip = res;
-//           this.router.initialNavigation();
-//           window.location.reload(true);
-//         });
-//       })

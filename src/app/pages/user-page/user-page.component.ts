@@ -20,7 +20,6 @@ export class UserPageComponent implements OnInit {
     this.tripService.getUserTrips(this.authService.user._id)
     .then((trips) => {
       this.trips = trips;
-      console.log(this.trips);
     })
   }
 

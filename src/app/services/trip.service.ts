@@ -49,7 +49,6 @@ export class TripService {
     const options = {
       withCredentials: true
     };
-    console.log(data)
     return this.httpClient.post(`${this.API_URL}/${id}`, data, options)
     .toPromise()
   }

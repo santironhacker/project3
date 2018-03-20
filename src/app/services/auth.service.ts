@@ -19,7 +19,6 @@ export class AuthService {
   constructor(private httpClient: HttpClient) { }
 
   private setUser(user?: any) {
-    console.log("user service", user);
     this.user = user;
     this.userChange.next(user);
     return user;

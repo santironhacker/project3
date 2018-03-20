@@ -31,7 +31,6 @@ export class NewMembersComponent implements OnInit {
 
   ngOnInit() {
     const doThis = () => {
-      console.log(this.users, 'ok')
       
       this.filteredUsers = this.myControl.valueChanges
       .pipe(
@@ -50,7 +49,6 @@ export class NewMembersComponent implements OnInit {
 
   setInput(){
     let member = <HTMLInputElement>document.getElementById('add-member');
-    console.log(member.value);
     let addedMember = document.createElement("div");
     let addedMembersList = document.getElementById('added-members') as HTMLElement;
     addedMember.innerText = member.value;
