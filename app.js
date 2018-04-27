@@ -25,6 +25,9 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(path.join(__dirname, '/dist/index.html')));
 });
 
+// set up api
+app.use('/api', api);
+
 const port = process.env.PORT || 8080;
 
 app.listen(port, () => console.log(pkg.name + ' ' + pkg.version + ' listening on ' + port));
